@@ -1,12 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Test from './test';
+import Cursor from './Cursor'
+import Bouton_fleche from './Bouton_fleche'
+
+
 
 function App() {
   return (
     <div className="App">
-      <Test txt={"salut"}/>
+    <Bouton_fleche txt={'hrutrtydgdfg'} color={"yellow"}> 
+      <p>groiy</p>
+    </Bouton_fleche>
+
+     <Bouton_fleche txt={'reterterterte'} color={12}> 
+      <p>groiy</p>
+    </Bouton_fleche>
+    {/*<Cursor></Cursor>
+      <Test txt={"salut"}/> */}
      
      {/*  <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

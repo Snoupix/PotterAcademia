@@ -3,7 +3,7 @@ import React, { Component,Fragment } from 'react'
 export default class Test extends Component {
     
     
-    state = {
+    /* state = {
         color :"red"
     }
 
@@ -38,5 +38,5 @@ export default class Test extends Component {
             <button onClick={(e)=> this._onClick(e,45)}>change la couleur en bleu</button>
             </Fragment>
         )
-    }
+    } */
 }
