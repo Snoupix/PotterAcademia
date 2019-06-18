@@ -8,13 +8,13 @@ export default class Test extends Component {
     }
 
     _onClick = (e,id) =>  
-   { alert(id)
+   { /*alert(id)*/
     this.setState({
         color : "blue"
     })
 }
     
-    componentWillMount() {
+    /*componentWillMount() {
         alert("je vais etre monté")
     }
 
@@ -24,7 +24,7 @@ export default class Test extends Component {
 
     componentWillUnmount() {
         alert("Je vais être démonté")
-    }
+    }*/
     
     
 

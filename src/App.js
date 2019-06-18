@@ -1,7 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import './App.scss';
 import Test from './test';
+import Navbar from './navbar';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload and test update.
         </p>
-        <a
+        <
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
@@ -21,7 +22,14 @@ function App() {
         >
           Learn React
         </a>
-      </header> */}
+      </header> */
+      <header className="Header">
+        <Navbar/>
+
+
+      </header>
+      
+      }
     </div>
   );
 }
