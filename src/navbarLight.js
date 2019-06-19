@@ -3,10 +3,6 @@ import Navbutton from './buttonstyles';
 
 export default class NavbarLight extends Component{
 
-    state={
-        border: "1px solid black"
-    }
-    
     render(){
         return(
             <nav>
