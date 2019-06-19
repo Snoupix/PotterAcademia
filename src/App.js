@@ -1,12 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Test from './test';
+import Section from './Section'
+
 
 function App() {
   return (
     <div className="App">
-      <Test txt={"salut"}/>
+    <Section></Section>
+   {/* <Test txt={"salut"}/> */}
+  {/*  <Section1>section1
+   </Section1> */}
      
      {/*  <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
