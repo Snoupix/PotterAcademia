@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Test from './test';
 import NavbarLight from './navbarLight';
+import NavbarDark from './navbarDark';
 
 function App() {
   return (

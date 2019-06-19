@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-const Navbutton = styled.div`
+const LightNavbutton = styled.div`
     position: relative;
     width: 150px;
     height: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-top: 5px;
     overflow: hidden;
     border: 1px solid #000;
@@ -39,11 +39,19 @@ const Navbutton = styled.div`
         color: #000;
         text-align: center;
         width: 101%;
-        font-weight: 300;
+        font-weight: 600;
         position: absolute;
         font-size: 20px;
         margin-top: 12px;
         overflow: hidden;
+    }
+    @media screen and (max-width: 965px){
+      .inkSpan, .inkButton{
+        font-size: 15px;
+      }
+      .inkSpan{
+        margin-top: 14px;
+      }
     }
     @-webkit-keyframes ani {
         from {
@@ -87,4 +95,4 @@ const Navbutton = styled.div`
     }      
 `;
 
-export default Navbutton;
+export default LightNavbutton;

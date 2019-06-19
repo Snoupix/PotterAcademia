@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
-import LightNavbutton from './buttonlightstyle';
+import DarkNavbutton from './buttondarkstyle';
 
-export default class NavbarLight extends Component{
+export default class NavbarDark extends Component{
 
     render(){
         return(
             <nav>
-                <LightNavbutton>
+                <DarkNavbutton>
                     <span className="inkSpan">Home</span>
                     <button className="inkButton">Home</button>
-                </LightNavbutton>
-                <LightNavbutton>
+                </DarkNavbutton>
+                <DarkNavbutton>
                     <span className="inkSpan">Personnages</span>
                     <button className="inkButton">Personnages</button>
-                </LightNavbutton>
-                <LightNavbutton>
+                </DarkNavbutton>
+                <DarkNavbutton>
                     <span className="inkSpan">Potions</span>
                     <button className="inkButton">Potions</button>
-                </LightNavbutton>
-                <LightNavbutton>
+                </DarkNavbutton>
+                <DarkNavbutton>
                     <span className="inkSpan">Sorts</span>
                     <button className="inkButton">Sorts</button>
-                </LightNavbutton>
-                <LightNavbutton>
-                    <span className="inkSpan">École</span>
-                    <button className="inkButton">École</button>
-                </LightNavbutton>
+                </DarkNavbutton>
+                <DarkNavbutton>
+                    <span className="inkSpan reliques">Reliques de la mort</span>
+                    <button className="inkButton">Reliques de la mort</button>
+                </DarkNavbutton>
             </nav>
         )
     }
