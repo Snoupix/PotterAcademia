@@ -1,48 +1,58 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
-
+import scrollTop from 'react-scroll'
 const flechestyle ={
   display:"flex",
+  marginTop: "150%",
   cursor:"pointer",
   borderRadius:"50%",
   color:"blue",
-  backgroundColor : "black",
-    width : "36px",
-    height : "36px",
-    justifyContent : "center",
-    alignItems : "center",
-    transition: "bottom .2s,opacity .2s",
+  backgroundColor : "transparent",
+  width : "36px",
+  height : "36px",
+  justifyContent : "center",
+  alignItems : "center",
+  transition: "bottom .2s,opacity .2s",
+  boxShadow: "2px 2px 2px 1px rgba(55, 55, 55, 55)",
 }
 
 class fleche1 extends React.Component {
+   // Adds an event listener when the component is mount.
+   componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
 
+  // Remove the event listener when the component is unmount.
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+  //configure un état par défaut
   state={
-    price : 1
+    vu : 1
   }
 
-  _onClick(e){
-    this.setState({price:1})
+  handleScroll =e => {
+    this.fleche =e.target
+    //si la position Y de la barre de scroll est supérieur à 24 alors vu prend l'état 0 sinon 1
+    if(window.pageYOffset>24) {
+        this.setState({vu:0})
+    } else {
+      this.setState({vu:1})
+    } 
+    
   }
-
-    render() {
-
+ 
+    render() {    
       return (
-        this.state.price ?
-        <div style={flechestyle}>
-        <div>{this.props.txt}</div>
-        <div>{this.props.color}</div>
-        </div>
-        :
-        <button onClick={
-            (e)=> this._onClick(e)
-        }>je m'abonne</button>
-
-       /*  <div> hello {this.props.children}</div> */
-     /*    <div id="back-to-top" className="hidden" className="fleche1" style={ flechestyle}>
+       this.state.vu ? 
+       //fais apparaitre un bouton flèche
+       <div className="parentfl1" style={{position:'fixed',visibility : this.state.vu}}>
+    <div id="back-to-top" className="fleche1" onScroll={this.handleScroll} style={ flechestyle}>
           <FontAwesomeIcon icon={faArrowDown}/>
-        </div> */
-        
+        </div> 
+    </div>/*ou ne le fais pas apparaitre si c'est faux*/ 
+    : null
       );
     }
   }
