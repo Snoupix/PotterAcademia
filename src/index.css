@@ -6,3 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+nav {
+  display: flex;
+  padding-left: 15%;
+  padding-right: 15%; 
+}

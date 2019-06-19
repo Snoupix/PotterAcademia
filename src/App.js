@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
-// import './App.scss';
 import Test from './test';
-import Navbar from './navbar';
+import NavbarLight from './navbarLight';
 
 function App() {
   return (
     <div className="App">
+      <header className="Header">
+        <NavbarLight/>
+      </header>
+
       <Test txt={"salut"}/>
      
      {/*  <header className="App-header">
@@ -14,21 +17,10 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload and test update.
         </p>
-        <
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
-      </header> */
-      <header className="Header">
-        <Navbar/>
-
-
-      </header>
-      
+      </header> */      
       }
     </div>
   );
