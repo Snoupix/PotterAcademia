@@ -7,8 +7,8 @@ export default class NavbarLight extends Component{
         return(
             <nav>
                 <LightNavbutton>
-                    <span className="inkSpan">Home</span>
-                    <button className="inkButton">Home</button>
+                    <span className="inkSpan">Accueil</span>
+                    <button className="inkButton">Accueil</button>
                 </LightNavbutton>
                 <LightNavbutton>
                     <span className="inkSpan">Personnages</span>
@@ -23,8 +23,8 @@ export default class NavbarLight extends Component{
                     <button className="inkButton">Sorts</button>
                 </LightNavbutton>
                 <LightNavbutton>
-                    <span className="inkSpan">École</span>
-                    <button className="inkButton">École</button>
+                    <span className="inkSpan">Écoles</span>
+                    <button className="inkButton">Écoles</button>
                 </LightNavbutton>
             </nav>
         )

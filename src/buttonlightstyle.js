@@ -8,7 +8,7 @@ const LightNavbutton = styled.div`
     margin-right: 10px;
     margin-top: 5px;
     overflow: hidden;
-    border: 1px solid #000;
+    border: 1px solid #a4834d;
     font-weight: 300;
     transition: 0.5s;
     letter-spacing: 1px;
@@ -19,13 +19,14 @@ const LightNavbutton = styled.div`
         font-weight: 300;
         font-size: 20px;
         letter-spacing: 1px;
-        background: #000;
+        background: #a4834d;
         -webkit-mask: url("https://github.com/robin-dela/css-mask-animation/blob/master/img/nature-sprite-2.png?raw=true");
         mask: url("https://github.com/robin-dela/css-mask-animation/blob/master/img/nature-sprite-2.png?raw=true");
         -webkit-mask-size: 7100% 100%;
         mask-size: 7100% 100%;
         border: none;
         color: #fff;
+        font-family: 'IM Fell DW Pica', serif;
         cursor: pointer;
         -webkit-animation: ani2 0.7s steps(70) forwards;
         animation: ani2 0.7s steps(70) forwards;
@@ -37,12 +38,13 @@ const LightNavbutton = styled.div`
     }
     .inkSpan {
         position: absolute;
-        color: #000;
+        color: #a4834d;
         text-align: center;
         width: 101%;
         font-weight: 600;
         position: absolute;
         font-size: 20px;
+        font-family: 'IM Fell DW Pica', serif;
         margin-top: 12px;
         overflow: hidden;
     }
