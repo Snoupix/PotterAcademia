@@ -1,10 +1,9 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
 import Background from "./assets/img/431.jpg";
 import Quote from "./assets/img/quote.png";
 import Tache from "./assets/img/ink_corner.png";
 import TacheWhite from "./assets/img/ink_corner_white.png"
 import "./Section.css";
-import ReactResizeDetector from 'react-resize-detector';
 
 const sectionStyle = {
   width: "100%",
@@ -21,7 +20,6 @@ const quoteStyle = {
   marginLeft : "-12%",
 };
 const tacheStyle = {
-  position: "absolute",
   right: "-600px",
   top: "-500px",
   transform: "scale(0.5)",
@@ -46,20 +44,6 @@ class Section extends React.Component {
   Clickclose(e) {
     e.preventDefault();
     this.setState({ animationisplaying: 2 });
-  }
-
-  EventDelay() {
-    this.setState({ isVisible: 2 });
-  }
-
-  TransitionEvent() {
-    console.log(this.state.isVisible);
-    if (this.state.isVisible == 2)
-      this.state.classDiv = "cd-transition-layer visible";
-    if (this.state.isVisible == 1)
-      this.state.classDiv = "cd-transition-layer visible opening";
-    if (this.state.isVisible == 0)
-      this.state.classDiv = "cd-transition-layer visible closing";
   }
 
   render() {
@@ -89,8 +73,8 @@ class Section extends React.Component {
       <img src={Quote} style={ quoteStyle }></img>
         <div className="section1light" style={sectionStyle}>
           <img src={Background} />
-          <img className={this.state.animationisplaying===1? "invisible" : "visible"} src={Tache} style={tacheStyle} />
-          <img className={this.state.animationisplaying===1? "visible" : "invisible"} src={TacheWhite} style={tacheStyle} />
+          <img className={this.state.animationisplaying===1? " imgblack invisible" : "imgblack visible"} src={Tache} style={tacheStyle} />
+          <img className={this.state.animationisplaying===1? "imgwhite visible" : "imgwhite invisible"} src={TacheWhite} style={tacheStyle} />
           <div style={{position:"fixed"}}
             onClick={e => this.Clickopen(e)}
             className={this.state.animationisplaying===1? "cd-btn cd-modal-trigger" : "cd-btn cd-modal-trigger visible"}
