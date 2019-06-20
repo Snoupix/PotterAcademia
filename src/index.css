@@ -44,12 +44,12 @@ body {
 }
 nav {
   display: flex;
-  padding-left: 15%;
-  padding-right: 15%; 
   justify-content: center;
 }
 header {
   position: fixed;
   z-index: 3;
   width: 100%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
