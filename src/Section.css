@@ -82,6 +82,7 @@ header{
   -webkit-transition: opacity 0.7s, visibility 0s;
   -moz-transition: opacity 0.7s, visibility 0s;
   transition: opacity 0.7s, visibility 0s;
+  cursor: none;
 }
 .cd-modal.visible .modal-content {
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
@@ -121,7 +122,6 @@ Transition Layer
 
 -------------------------------- */
 .cd-btn{
-    cursor: pointer;
     position: fixed;
     top: -31px;
     z-index: 100;
@@ -131,11 +131,14 @@ Transition Layer
     right: -23px;
     display: none;
     z-index: 5;
+    cursor: inherit;
 }
 .visible{
   display: block;
 }
-
+.imgwhite{
+  cursor: none;
+}
 .cd-transition-layer {
     top: 0;
     left: 0;
@@ -258,4 +261,15 @@ Transition Layer
       transform: translateY(-50%) translateX(-2%);
     }
   }
-  
+.follower{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.lumos{
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #e8f7f7;
+  box-shadow: 0 0 10px 10px #e8f7f7;
+}

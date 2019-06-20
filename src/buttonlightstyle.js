@@ -32,6 +32,7 @@ const LightNavbutton = styled.div`
         :hover {
             -webkit-animation: ani 0.7s steps(70) forwards;
             animation: ani 0.7s steps(70) forwards;
+            cursor: inherit;
         }
     }
     .inkSpan {

@@ -32,6 +32,7 @@ const DarkNavbutton = styled.div`
         :hover {
             -webkit-animation: ani 0.7s steps(22) forwards;
             animation: ani 0.7s steps(22) forwards;
+            cursor: inherit;
         }
     }
     .inkSpan {

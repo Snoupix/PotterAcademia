@@ -5,10 +5,51 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+    animation: animate 0.25s infinite;
+  }
+@keyframes animate {
+  0% {
+    cursor: url("assets/img/cursor/cursorgoldensnitchIMG1.gif") 27 15, auto;
+  }
+  10% {
+    cursor: url("assets/img/cursor/cursorgoldensnitchIMG2.gif") 27 15, auto;
+  }
+  20% {
+    cursor: url("assets/img/cursor/cursorgoldensnitchIMG3.gif") 27 15, auto;
+  }
+  30% {
+    cursor: url("assets/img/cursor/cursorgoldensnitchIMG4.gif") 27 15, auto;
+  }
+  40% {
+    cursor: url("assets/img/cursor/cursorgoldensnitchIMG5.gif") 27 15, auto;
+  }
+  50% {
+    cursor: url("assets/img/cursor/cursorgoldensnitchIMG6.gif") 27 15, auto;
+  }
+  60% {
+    cursor: url("assets/img/cursor/cursorgoldensnitchIMG7.gif") 27 15, auto;
+  }
+  70% {
+    cursor: url("assets/img/cursor/cursorgoldensnitchIMG8.gif") 27 15, auto;
+  }
+  80% {
+    cursor: url("assets/img/cursor/cursorgoldensnitchIMG9.gif") 27 15, auto;
+  }
+  90% {
+    cursor: url("assets/img/cursor/cursorgoldensnitchIMG9.gif") 27 15, auto;
+  }
+  100% {
+    cursor: url("assets/img/cursor/cursorgoldensnitchIMG10.gif") 27 15, auto;
+  }
 }
 nav {
   display: flex;
   justify-content: center;
+}
+header {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
   padding-left: 15%;
   padding-right: 15%;
 }
