@@ -24,11 +24,22 @@ const tacheStyle = {
   top: "-500px",
   transform: "scale(0.5)",
   position: "fixed",
+  zIndex : 0,
+};
+const tacheStyleWhite = {
+  right: "-600px",
+  top: "-500px",
+  transform: "scale(0.5)",
+  position: "fixed",
   zIndex : 4,
 };
 
 
 class Section extends React.Component {
+  
+
+  
+  
   state = {
     isVisible: 2,
     animationisplaying: 0,
@@ -37,18 +48,28 @@ class Section extends React.Component {
 
   Clickopen(e) {
     e.preventDefault();
+    this.props.changeState()
     this.setState({ animationisplaying: 1 });
   }
 
   
   Clickclose(e) {
     e.preventDefault();
+    this.props.changeState()
     this.setState({ animationisplaying: 2 });
   }
 
+  Visible(x){ this.props.changeState()
+    x = this.state.isVisible
+    return x;
+  }
+
+
   render() {
+    
+
     return (
-      <div className="App">
+      <div className="App" animation={this.state.animationisplaying}>
       <div className={this.state.animationisplaying===0? "cd-modal" : this.state.animationisplaying===1? "cd-modal visible" : this.state.animationisplaying===2? "cd-modal" : ""}>
 	<div className="modal-content">
 		<h1>My Modal Content</h1>
@@ -70,7 +91,9 @@ class Section extends React.Component {
             ? "cd-transition-layer visible opening closing" : ""
         }
       >
+      <div style={{margin : "0 auto", justifyContent : "center"}}>
       <img src={Quote} style={ quoteStyle }></img>
+      </div>
         <div className="section1light" style={sectionStyle}>
           <img src={Background} />
           <img className={this.state.animationisplaying===1? " imgblack invisible" : "imgblack visible"} src={Tache} style={tacheStyle} />
