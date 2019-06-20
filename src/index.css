@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    animation: animate 0.25s infinite;
+  animation: animate 0.25s infinite;
   }
 @keyframes animate {
   0% {
@@ -50,6 +50,4 @@ header {
   position: fixed;
   z-index: 3;
   width: 100%;
-  padding-left: 15%;
-  padding-right: 15%;
 }
