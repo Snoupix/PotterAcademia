@@ -3,6 +3,12 @@
 Modal window 
 
 -------------------------------- */
+header{
+  position: fixed;
+  z-index: 4;
+  width: 100%
+}
+
 .cd-modal {
   position: fixed;
   top: 0;

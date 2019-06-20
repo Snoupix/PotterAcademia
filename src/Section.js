@@ -4,7 +4,6 @@ import Quote from "./assets/img/quote.png";
 import Tache from "./assets/img/ink_corner.png";
 import TacheWhite from "./assets/img/ink_corner_white.png"
 import "./Section.css";
-import ReactResizeDetector from 'react-resize-detector';
 
 const sectionStyle = {
   width: "100%",
@@ -21,7 +20,13 @@ const quoteStyle = {
   marginLeft : "-12%",
 };
 const tacheStyle = {
-  position: "absolute",
+  right: "-600px",
+  top: "-500px",
+  transform: "scale(0.5)",
+  position: "fixed",
+  zIndex : 0,
+};
+const tacheStyleWhite = {
   right: "-600px",
   top: "-500px",
   transform: "scale(0.5)",
@@ -31,6 +36,10 @@ const tacheStyle = {
 
 
 class Section extends React.Component {
+  
+
+  
+  
   state = {
     isVisible: 2,
     animationisplaying: 0,
@@ -39,32 +48,28 @@ class Section extends React.Component {
 
   Clickopen(e) {
     e.preventDefault();
+    this.props.changeState()
     this.setState({ animationisplaying: 1 });
   }
 
   
   Clickclose(e) {
     e.preventDefault();
+    this.props.changeState()
     this.setState({ animationisplaying: 2 });
   }
 
-  EventDelay() {
-    this.setState({ isVisible: 2 });
+  Visible(x){ this.props.changeState()
+    x = this.state.isVisible
+    return x;
   }
 
-  TransitionEvent() {
-    console.log(this.state.isVisible);
-    if (this.state.isVisible == 2)
-      this.state.classDiv = "cd-transition-layer visible";
-    if (this.state.isVisible == 1)
-      this.state.classDiv = "cd-transition-layer visible opening";
-    if (this.state.isVisible == 0)
-      this.state.classDiv = "cd-transition-layer visible closing";
-  }
 
   render() {
+    
+
     return (
-      <div className="App">
+      <div className="App" animation={this.state.animationisplaying}>
       <div className={this.state.animationisplaying===0? "cd-modal" : this.state.animationisplaying===1? "cd-modal visible" : this.state.animationisplaying===2? "cd-modal" : ""}>
 	<div className="modal-content">
 		<h1>My Modal Content</h1>
@@ -86,11 +91,13 @@ class Section extends React.Component {
             ? "cd-transition-layer visible opening closing" : ""
         }
       >
+      <div style={{margin : "0 auto", justifyContent : "center"}}>
       <img src={Quote} style={ quoteStyle }></img>
+      </div>
         <div className="section1light" style={sectionStyle}>
           <img src={Background} />
           <img className={this.state.animationisplaying===1? "invisible" : "visible"} src={Tache} style={tacheStyle} />
-          <img className={this.state.animationisplaying===1? "visible" : "invisible"} src={TacheWhite} style={tacheStyle} />
+          <img className={this.state.animationisplaying===1? "visible" : "invisible"} src={TacheWhite} style={tacheStyleWhite} />
           <div style={{position:"fixed"}}
             onClick={e => this.Clickopen(e)}
             className={this.state.animationisplaying===1? "cd-btn cd-modal-trigger" : "cd-btn cd-modal-trigger visible"}
