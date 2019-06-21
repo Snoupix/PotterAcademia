@@ -2,6 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import scrollTop from 'react-scroll'
+
+
 const flechestyle ={
   display:"flex",
   marginTop: "150%",
@@ -18,6 +20,11 @@ const flechestyle ={
 }
 
 class fleche1 extends React.Component {
+
+  testA(e) {
+      ('html, body').animate({ scrollTop: (((this.e).attr('href')).offset().top, 500, 'linear')
+    });
+  }
    // Adds an event listener when the component is mount.
    componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
@@ -47,11 +54,12 @@ class fleche1 extends React.Component {
       return (
        this.state.vu ? 
        //fais apparaitre un bouton flèche
-       <div className="parentfl1" style={{position:'fixed',visibility : this.state.vu}}>
+       <section href="2">
+       <div  onClick={e => this.testA(e)} className="parentfl1" style={{position:'fixed',visibility : this.state.vu}}>
     <div id="back-to-top" className="fleche1" onScroll={this.handleScroll} style={ flechestyle}>
           <FontAwesomeIcon icon={faArrowDown}/>
         </div> 
-    </div>/*ou ne le fais pas apparaitre si c'est faux*/ 
+    </div></section>/*ou ne le fais pas apparaitre si c'est faux*/ 
     : null
       );
     }
