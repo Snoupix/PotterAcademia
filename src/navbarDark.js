@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import DarkNavbutton from './buttondarkstyle';
 import Section from './Section'
+
 export default class NavbarDark extends Component{
+
+
 
     render(){
         return(
             <nav style={{zIndex : "10"}}>
                 <DarkNavbutton>
                     <span className="inkSpan">Home</span>
-                    <button className="inkButton">Home</button>
+                    <button className="inkButton" >Home</button>
                 </DarkNavbutton>
                 <DarkNavbutton>
                     <span className="inkSpan">Personnages</span>

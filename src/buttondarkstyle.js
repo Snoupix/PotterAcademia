@@ -43,11 +43,13 @@ const DarkNavbutton = styled.div`
         font-weight: 600;
         position: absolute;
         font-size: 20px;
-        margin-top: 12px; // ${props => props.nomargintop ? '0px' : '12px'};
         overflow: hidden;
+        background-color : white;
+        height : 100%;
+        padding-top : 12px;
     }
     .reliques{
-        margin-top: -4px;
+        padding-top : 0;
         letter-spacing: 2px;
     }
     @media screen and (max-width: 965px){

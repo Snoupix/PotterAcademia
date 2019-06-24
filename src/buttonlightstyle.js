@@ -19,7 +19,6 @@ const LightNavbutton = styled.div`
         font-weight: 300;
         font-size: 20px;
         letter-spacing: 1px;
-        background: #000;
         -webkit-mask: url("https://github.com/robin-dela/css-mask-animation/blob/master/img/nature-sprite-2.png?raw=true");
         mask: url("https://github.com/robin-dela/css-mask-animation/blob/master/img/nature-sprite-2.png?raw=true");
         -webkit-mask-size: 7100% 100%;
