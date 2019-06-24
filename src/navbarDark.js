@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import DarkNavbutton from './buttondarkstyle';
-import Section from './Section'
-
 export default class NavbarDark extends Component{
 
 
@@ -10,8 +8,8 @@ export default class NavbarDark extends Component{
         return(
             <nav style={{zIndex : "10"}}>
                 <DarkNavbutton>
-                    <span className="inkSpan">Home</span>
-                    <button className="inkButton" >Home</button>
+                    <span className="inkSpan">Accueil</span>
+                    <button className="inkButton">Accueil</button>
                 </DarkNavbutton>
                 <DarkNavbutton>
                     <span className="inkSpan">Personnages</span>

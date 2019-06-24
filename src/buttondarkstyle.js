@@ -8,7 +8,7 @@ const DarkNavbutton = styled.div`
     margin-right: 10px;
     margin-top: 5px;
     overflow: hidden;
-    border: 1px solid; // #000
+    border: 1px solid #fff;
     font-weight: 300;
     transition: 0.5s;
     letter-spacing: 1px;
@@ -26,6 +26,7 @@ const DarkNavbutton = styled.div`
         mask-size: 2300% 100%;
         border: none;
         color: #fff;
+        font-family: 'IM Fell DW Pica', serif;
         cursor: pointer;
         -webkit-animation: ani2 0.7s steps(22) forwards;
         animation: ani2 0.7s steps(22) forwards;
@@ -38,19 +39,25 @@ const DarkNavbutton = styled.div`
     .inkSpan {
         position: absolute;
         color: #000;
+        background: white;
         text-align: center;
         width: 101%;
+        height: 100%;
+        padding-top: 12px;
         font-weight: 600;
         position: absolute;
         font-size: 20px;
+        font-family: 'IM Fell DW Pica', serif;
+        // margin-top: 12px; // ${props => props.nomargintop ? '0px' : '12px'};
         overflow: hidden;
         background-color : white;
         height : 100%;
         padding-top : 12px;
     }
     .reliques{
-        padding-top : 0;
+        margin-top: 0px;
         letter-spacing: 2px;
+        padding-top: 0px;
     }
     @media screen and (max-width: 965px){
         .reliques{

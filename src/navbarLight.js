@@ -13,8 +13,8 @@ export default class NavbarLight extends Component{
             console.log(BackgoundbtnStyle),
             <nav>
                 <LightNavbutton>
-                    <span className="inkSpan">Home</span>
-                    <button className="inkButton" style={BackgoundbtnStyle}>Home</button>
+                    <span className="inkSpan">Accueil</span>
+                    <button className="inkButton">Accueil</button>
                 </LightNavbutton>
                 <LightNavbutton>
                     <span className="inkSpan">Personnages</span>
@@ -29,8 +29,8 @@ export default class NavbarLight extends Component{
                     <button className="inkButton" style={BackgoundbtnStyle}>Sorts</button>
                 </LightNavbutton>
                 <LightNavbutton>
-                    <span className="inkSpan">École</span>
-                    <button className="inkButton" style={BackgoundbtnStyle}>École</button>
+                    <span className="inkSpan">Écoles</span>
+                    <button className="inkButton">Écoles</button>
                 </LightNavbutton>
             </nav>
         )

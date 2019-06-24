@@ -121,13 +121,13 @@ class Section extends React.Component {
         } style={{opacity : this.state.animationisplaying===0? "" :  this.state.x}}
       >
       <div style={{marginTop : "18%", display : "flex", position : "absolute", width : "100%", justifyContent : "center"}}>
-      <img src={Quote} style={ quoteStyle }></img>
+      <img alt="" src={Quote} style={ quoteStyle }></img>
       </div>
         <div className="section1light">
           <div style={divStyle}/>
           <div style={divStyle} />
           <div style={divStyle} />
-          <img className={this.state.animationisplaying===1? " imgblack invisible" : "imgblack visible"} src={Tache} style={tacheStyle} />
+          <img alt="" className={this.state.animationisplaying===1? " imgblack invisible" : "imgblack visible"} src={Tache} style={tacheStyle} />
           <div style={{position:"fixed"}}
             onClick={e => this.Clickopen(e)}
             className={this.state.animationisplaying===1? "cd-btn cd-modal-trigger" : "cd-btn cd-modal-trigger visible"}
