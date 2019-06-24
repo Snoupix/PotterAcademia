@@ -24,7 +24,7 @@ const tacheStyle = {
   top: "-500px",
   transform: "scale(0.5)",
   position: "fixed",
-  zIndex : 0,
+  zIndex : 4,
 };
 const tacheStyleWhite = {
   right: "-600px",
