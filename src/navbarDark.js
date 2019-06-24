@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import DarkNavbutton from './buttondarkstyle';
-import Section from './Section'
 export default class NavbarDark extends Component{
 
     render(){
