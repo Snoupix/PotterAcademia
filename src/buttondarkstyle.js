@@ -50,6 +50,9 @@ const DarkNavbutton = styled.div`
         font-family: 'IM Fell DW Pica', serif;
         // margin-top: 12px; // ${props => props.nomargintop ? '0px' : '12px'};
         overflow: hidden;
+        background-color : white;
+        height : 100%;
+        padding-top : 12px;
     }
     .reliques{
         margin-top: 0px;

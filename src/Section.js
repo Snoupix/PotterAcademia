@@ -2,9 +2,15 @@ import React from "react";
 import Background from "./assets/img/431.jpg";
 import Quote from "./assets/img/quote.png";
 import Tache from "./assets/img/ink_corner.png";
-import TacheWhite from "./assets/img/ink_corner_white.png"
+import TacheWhite from "./assets/img/ink_corner_white.png";
 import "./Section.css";
+import { NONAME } from "dns";
 
+const divStyle = {
+  backgroundImage : "url(" + Background + ")",
+  width : "100%",
+  height : "1100px",
+}
 const sectionStyle = {
   width: "100%",
   height: "auto",
@@ -13,11 +19,7 @@ const sectionStyle = {
   padding: "0"
 };
 const quoteStyle = {
-  margin : "0 auto",
-  marginTop: "15%",
   transform: "scale(1.3)",
-  position: "absolute",
-  marginLeft : "-12%",
 };
 const tacheStyle = {
   right: "-600px",
@@ -33,23 +35,49 @@ const tacheStyleWhite = {
   position: "fixed",
   zIndex : 4,
 };
+const Pavu = {
+  display : "none",
 
+}
+const Vu = {
+  display : "",
+}
+const transitionBackground = document.getElementsByClassName("bg-layer")
+const transitionLayer = document.getElementsByClassName("cd-transition-layer")
+const cdmodal = document.getElementsByClassName("cd-modal")
 
 class Section extends React.Component {
-  
 
-  
-  
+
+
   state = {
     isVisible: 2,
     animationisplaying: 0,
-    classDiv: "cd-transition-layer visible"
+    classDiv: "cd-transition-layer visible",
+    x : 1,
+   
   };
+
+  componentDidMount() {
+    console.log(transitionLayer)
+    document.getElementsByClassName('bg-layer')[0].addEventListener('animationend', function(){
+      transitionLayer[0].classList.remove('closing', 'opening',);})
+      document.getElementsByClassName('cd-modal')[0].addEventListener('animationend', function(){
+        transitionLayer[0].classList.add('visible');
+      console.log("end");
+     })
+  }
+
+
+  Pavuretarde(){
+    if(this.state.x) while(this.state.x>-0.1){this.state.x = this.state.x - 0.05}
+  }
 
   Clickopen(e) {
     e.preventDefault();
     this.props.changeState()
-    this.setState({ animationisplaying: 1 });
+    this.setState({ animationisplaying: 1 })
+
   }
 
   
@@ -57,23 +85,24 @@ class Section extends React.Component {
     e.preventDefault();
     this.props.changeState()
     this.setState({ animationisplaying: 2 });
+    this.state.x = 1
   }
-
-  Visible(x){ this.props.changeState()
-    x = this.state.isVisible
-    return x;
-  }
-
 
   render() {
-    
 
     return (
+    
       <div className="App" animation={this.state.animationisplaying}>
-      <div className={this.state.animationisplaying===0? "cd-modal" : this.state.animationisplaying===1? "cd-modal visible" : this.state.animationisplaying===2? "cd-modal" : ""}>
+      <div className={this.state.animationisplaying===0? "cd-modal" : this.state.animationisplaying===1? "cd-modal visible" : this.state.animationisplaying===2? "cd-modal" : ""} style={this.state.animationisplaying===0? Pavu : Vu  }>
 	<div className="modal-content">
 		<h1>My Modal Content</h1>
-		
+		<img className={this.state.animationisplaying===1? "imgwhite visible" : "imgwhite invisible"} src={TacheWhite} style={tacheStyleWhite} />
+    <div
+          style={{position:"fixed"}}
+            onClick={e => this.Clickclose(e)}
+            className={this.state.animationisplaying===1? "cd-btn cd-modal-trigger visible" : "cd-btn cd-modal-trigger"}
+          >
+    </div>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad modi repellendus, optio eveniet eligendi molestiae? Fugiat, temporibus! A rerum pariatur neque laborum earum, illum voluptatibus eum voluptatem fugiat, porro animi tempora? Sit harum nulla, nesciunt molestias, iusto aliquam aperiam est qui possimus reprehenderit ipsam ea aut assumenda inventore iste! Animi quaerat facere repudiandae earum quisquam accusamus tempora, delectus nesciunt, provident quae aliquam, voluptatum beatae quis similique in maiores repellat eligendi voluptas veniam optio illum vero! Eius, dignissimos esse eligendi veniam.
 		</p>
@@ -89,29 +118,22 @@ class Section extends React.Component {
             ? "cd-transition-layer visible" :  this.state.animationisplaying===1
             ? "cd-transition-layer visible opening" :   this.state.animationisplaying===2
             ? "cd-transition-layer visible opening closing" : ""
-        }
+        } style={{opacity : this.state.animationisplaying===0? "" :  this.state.x}}
       >
-      <div style={{margin : "0 auto", justifyContent : "center"}}>
+      <div style={{marginTop : "18%", display : "flex", position : "absolute", width : "100%", justifyContent : "center"}}>
       <img alt="" src={Quote} style={ quoteStyle }></img>
       </div>
-        <div className="section1light" style={sectionStyle}>
-          <img alt="" src={Background} />
+        <div className="section1light">
+          <div style={divStyle}/>
+          <div style={divStyle} />
+          <div style={divStyle} />
           <img alt="" className={this.state.animationisplaying===1? " imgblack invisible" : "imgblack visible"} src={Tache} style={tacheStyle} />
-          <img alt="" className={this.state.animationisplaying===1? "imgwhite visible" : "imgwhite invisible"} src={TacheWhite} style={tacheStyleWhite} />
           <div style={{position:"fixed"}}
             onClick={e => this.Clickopen(e)}
             className={this.state.animationisplaying===1? "cd-btn cd-modal-trigger" : "cd-btn cd-modal-trigger visible"}
-          >
-            
+          > 
           </div>
-          <div
-          style={{position:"fixed"}}
-            onClick={e => this.Clickclose(e)}
-            className={this.state.animationisplaying===1? "cd-btn cd-modal-trigger visible" : "cd-btn cd-modal-trigger"}
-          >
-            
           </div>
-        </div>
         <div className="bg-layer" />
       </div>
       </div>
