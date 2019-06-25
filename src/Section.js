@@ -4,7 +4,6 @@ import Quote from "./assets/img/quote.png";
 import Tache from "./assets/img/ink_corner.png";
 import TacheWhite from "./assets/img/ink_corner_white.png";
 import "./Section.css";
-import SectionSorts from "./sorts";
 import { NONAME } from "dns";
 
 const divStyle = {

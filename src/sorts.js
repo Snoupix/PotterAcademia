@@ -1,23 +1,29 @@
-import React from 'react'
-import AliceCarousel from 'react-alice-carousel'
-import "react-alice-carousel/lib/alice-carousel.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
- 
-const Gallery = () => {
-    const handleOnDragStart = e => e.preventDefault()
-}
+import React, {Fragment} from 'react';
+import './sorts.css';
+import Buttonstyle from './sortsbuttonstyle';
 
-console.log(Gallery);
+export default class Sorts extends React.Component {
 
-export default class SectionSorts extends React.Component {
+    render() {
+      return (
+        <Buttonstyle>
+          <button>toggle</button>
+          <button style={{color: "#000"}}>toggle2</button>
+        </Buttonstyle>
+      )
+    }
+  }
+
+
+
+/*export default class Sorts extends React {
+    
 
     render() {
         return (
-            <AliceCarousel mouseDragEnabled >
-                
-            </AliceCarousel>
-        )
+             <ul>
+                 <li>button</li>
+             </ul>
+        );
     }
-}
+}*/

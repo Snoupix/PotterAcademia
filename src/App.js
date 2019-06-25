@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Section from './Section';
 import Gallery from './carousel';
+import Sorts from './sorts';
 
 import NavbarLight from './navbarLight';
 import NavbarDark from './navbarDark';
@@ -32,6 +33,7 @@ class App extends React.Component {
     </header>
     <Section changeState={(e)=>this.changeState()} ></Section>
 
+    <Sorts/>
     <Gallery></Gallery>
     
     </div>
