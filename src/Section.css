@@ -163,7 +163,6 @@ Transition Layer
     overflow: hidden;
   }
   .cd-transition-layer .bg-layer {
-    position: fixed;
     left: 50%;
     top: 50%;
     -webkit-transform: translateY(-50%) translateX(-2%);
@@ -177,6 +176,7 @@ Transition Layer
     width: 2500%;
     background: url(assets/img/ink.png) no-repeat 0 0;
     background-size: 100% 100%;
+    position: absolute;
   }
   .cd-transition-layer.visible {
     opacity: 1.0;
@@ -190,7 +190,6 @@ Transition Layer
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    position: fixed;
   }
   .cd-transition-layer.closing .bg-layer {
     -webkit-animation: cd-sequence-reverse 0.8s steps(24);
@@ -199,7 +198,6 @@ Transition Layer
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    position: fixed;
   }
   .no-cssanimations .cd-transition-layer {
     display: none;

@@ -5,6 +5,7 @@ import Tache from "./assets/img/ink_corner.png";
 import TacheWhite from "./assets/img/ink_corner_white.png";
 import Sectionrelique from './Sectionpotion'
 import "./Section.css";
+import Gallery from './carousel'
 import { NONAME } from "dns";
 
 const divStyle = {
@@ -26,15 +27,15 @@ const tacheStyle = {
   right: "-600px",
   top: "-500px",
   transform: "scale(0.5)",
-  position: "fixed",
   zIndex : 0,
+  position : "absolute"
 };
 const tacheStyleWhite = {
   right: "-600px",
   top: "-500px",
   transform: "scale(0.5)",
-  position: "fixed",
   zIndex : 4,
+  position : "absolute"
 };
 const Pavu = {
   display : "none",
@@ -43,6 +44,15 @@ const Pavu = {
 const Vu = {
   display : "",
 }
+const divStyle2 = {
+  backgroundImage : "url(" + Background + ")",
+  width : "100%",
+  height: "600px",
+  margin: "auto",
+  paddingTop: "100px"
+
+}
+
 
 const transitionLayer = document.getElementsByClassName("cd-transition-layer")
 
@@ -80,7 +90,6 @@ class Section extends React.Component {
 
   }
 
-  
   Clickclose(e) {
     e.preventDefault();
     this.props.changeState()
@@ -110,7 +119,6 @@ class Section extends React.Component {
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis saepe amet sit fugit rerum, corporis minus vitae officia quaerat incidunt voluptate, blanditiis ea est quibusdam voluptas animi quasi totam magni, commodi praesentium. Possimus quam illo ipsam iste unde totam cupiditate deleniti, impedit assumenda hic eligendi natus tempora dolores quod mollitia ab non sunt eaque adipisci, suscipit quas aliquid officiis beatae. Necessitatibus voluptatibus, perferendis tenetur perspiciatis adipisci nesciunt eum ex fuga commodi iure numquam enim rem ullam labore nisi magni sint voluptatem quos! Eum iure exercitationem voluptates repellendus culpa doloremque laborum animi illum, sint fugit soluta possimus a fuga veritatis molestias corporis placeat illo pariatur dolor reiciendis earum, sapiente omnis. Placeat maiores omnis, porro officia, laborum eos. Fugiat mollitia inventore consequuntur odit eaque, rerum recusandae, eum sint molestiae consequatur culpa deserunt quae aliquid dolor tempora tenetur architecto repellendus enim quasi atque, odio voluptas. Tenetur repellendus explicabo ipsum inventore quia aut eos expedita necessitatibus asperiores blanditiis! Delectus nisi laudantium ipsum! Quasi blanditiis corrupti dicta maiores placeat laboriosam delectus ipsum facere voluptas, magnam voluptatibus, perferendis alias ullam saepe, perspiciatis recusandae voluptates, dolores praesentium?
 		</p>
-    <Sectionrelique/>
 	</div>
   </div>
       <div
@@ -125,8 +133,8 @@ class Section extends React.Component {
       <img alt="" src={Quote} style={ quoteStyle }></img>
       </div>
         <div className="section1light">
-          <div style={divStyle}/>
-          <div style={divStyle} />
+          <div id="acceuil" style={divStyle}/>
+          <div style={divStyle2}> <Gallery></Gallery></div>
           <div style={divStyle} />
           <img alt="" className={this.state.animationisplaying===1? " imgblack invisible" : "imgblack visible"} src={Tache} style={tacheStyle} />
           <div style={{position:"fixed"}}
@@ -135,7 +143,7 @@ class Section extends React.Component {
           > 
           </div>
           </div>
-        <div className="bg-layer"  />
+        <div className="bg-layer"/>
       </div>
       </div>
     );
