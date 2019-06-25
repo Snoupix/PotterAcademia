@@ -44,7 +44,6 @@ const styleButtonNext={
 //style du carousel ( taille, position, etc...)
 const styleCarou={
     paddingLeft: "70px",
-    paddingRight: "55px",
     paddingTop: "15px",
     paddingRight: "70px",
 
@@ -132,7 +131,7 @@ const datas = [
 class Gallery extends React.Component {
   state = {
     galleryItems: datas.map((i) => /* défini l'imagefront et le txt sur chaque id de carte (i+1)*/
-    (<Card key={i}> <img src={i.imagefront}></img>{i.txt}</Card>)),
+    (<Card key={i}> <img alt="" src={i.imagefront}></img>{i.txt}</Card>)),
   }
 
   //définie le nombre de slide apparente par rapport à la taille de l'écran
@@ -170,9 +169,7 @@ class Gallery extends React.Component {
         fadeOutAnimation={true}
         keysControlDisabled={false}
         dotsDisabled={true}
-        fadeOutAnimation={true}
         mouseDragEnabled={true}
-        items={this.state.galleryItems}
         ref={(el) => (this.Carousel = el)}
       ></AliceCarousel>
       {/*bouton previous et next, on peut définir leur image ici et leur objet de style */}
