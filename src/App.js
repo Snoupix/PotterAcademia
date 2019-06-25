@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import Section from './Section'
+import Section from './Section';
+import Gallery from './carousel';
 
 import NavbarLight from './navbarLight';
 import NavbarDark from './navbarDark';
@@ -31,7 +32,8 @@ class App extends React.Component {
     </header>
     <Section changeState={(e)=>this.changeState()} ></Section>
 
-
+    <Gallery></Gallery>
+    
     </div>
        
       
