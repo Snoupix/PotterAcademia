@@ -3,7 +3,9 @@ import Background from "./assets/img/431.jpg";
 import Quote from "./assets/img/quote.png";
 import Tache from "./assets/img/ink_corner.png";
 import TacheWhite from "./assets/img/ink_corner_white.png";
+import Sectionrelique from './Sectionpotion'
 import "./Section.css";
+import Gallery from './carousel'
 import { NONAME } from "dns";
 
 const divStyle = {
@@ -25,15 +27,15 @@ const tacheStyle = {
   right: "-600px",
   top: "-500px",
   transform: "scale(0.5)",
-  position: "fixed",
   zIndex : 0,
+  position : "absolute"
 };
 const tacheStyleWhite = {
   right: "-600px",
   top: "-500px",
   transform: "scale(0.5)",
-  position: "fixed",
   zIndex : 4,
+  position : "absolute"
 };
 const Pavu = {
   display : "none",
@@ -42,9 +44,17 @@ const Pavu = {
 const Vu = {
   display : "",
 }
-const transitionBackground = document.getElementsByClassName("bg-layer")
+const divStyle2 = {
+  backgroundImage : "url(" + Background + ")",
+  width : "100%",
+  height: "600px",
+  margin: "auto",
+  paddingTop: "100px"
+
+}
+
+
 const transitionLayer = document.getElementsByClassName("cd-transition-layer")
-const cdmodal = document.getElementsByClassName("cd-modal")
 
 class Section extends React.Component {
 
@@ -80,7 +90,6 @@ class Section extends React.Component {
 
   }
 
-  
   Clickclose(e) {
     e.preventDefault();
     this.props.changeState()
@@ -124,8 +133,8 @@ class Section extends React.Component {
       <img alt="" src={Quote} style={ quoteStyle }></img>
       </div>
         <div className="section1light">
-          <div style={divStyle}/>
-          <div style={divStyle} />
+          <div id="acceuil" style={divStyle}/>
+          <div style={divStyle2}> <Gallery></Gallery></div>
           <div style={divStyle} />
           <img alt="" className={this.state.animationisplaying===1? " imgblack invisible" : "imgblack visible"} src={Tache} style={tacheStyle} />
           <div style={{position:"fixed"}}
@@ -134,7 +143,7 @@ class Section extends React.Component {
           > 
           </div>
           </div>
-        <div className="bg-layer" />
+        <div className="bg-layer"/>
       </div>
       </div>
     );

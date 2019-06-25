@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import Section from './Section'
 import Bouton_fleche from './Bouton_fleche'
-import Gallery from './carousel'
+
+
 
 import NavbarLight from './navbarLight';
 import NavbarDark from './navbarDark';
@@ -34,8 +35,6 @@ class App extends React.Component {
     <Section changeState={(e)=>this.changeState()} ></Section>
 
 
-    <Bouton_fleche></Bouton_fleche>
-    <Gallery></Gallery>
     
     </div>
        
