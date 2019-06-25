@@ -9,6 +9,19 @@ header{
   width: 100%
 }
 
+.Stylefeetbase{
+  opacity : 0;
+  visibility : hidden;
+  transition-property: opacity;
+  transition-duration: 2s;
+}
+.Stylefeetmv {
+  opacity :1;
+  visibility : visible;
+  transition-property: opacity;
+  transition-duration: 2s;
+}
+
 .cd-modal {
   top: 0;
   left: 0;

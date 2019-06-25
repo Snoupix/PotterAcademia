@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Section from './Section'
 
+
 import NavbarLight from './navbarLight';
 import NavbarDark from './navbarDark';
 // import Mouse from './cursorDarkside';
@@ -30,7 +31,6 @@ class App extends React.Component {
     
     </header>
     <Section changeState={(e)=>this.changeState()} ></Section>
-
 
     </div>
        
