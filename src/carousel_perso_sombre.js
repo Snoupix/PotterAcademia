@@ -1,7 +1,7 @@
 import React from 'react'
 import AliceCarousel from 'react-alice-carousel'
 import "react-alice-carousel/lib/alice-carousel.css"
-import Card from './card_perso'
+import CardPersoSombre from './card_perso_sombre'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
@@ -10,7 +10,6 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 const styleButtonPrev={
     display:"flex",
     position: "absolute",
-    top: "1255px",
     left: "10px",
     cursor:"pointer",
     borderRadius:"50%",
@@ -27,7 +26,6 @@ const styleButtonPrev={
 const styleButtonNext={
     display:"flex",
     position: "absolute",
-    top: "1255px",
     right: "10px",
     cursor:"pointer",
     borderRadius:"50%",
@@ -46,6 +44,8 @@ const styleCarou={
     paddingTop: "15px",
     paddingRight: "70px",
     zIndex:"300",
+    height:"auto",
+    width:"auto"
 
 }
 
@@ -53,80 +53,70 @@ const styleCarou={
 const datas = [
     {
         id:0,
-        txt : 'Albus Perceval Wulfric Brian Dumbledore',
-        imagefront : 'img/frontsidedolby.png',
+        txt_perso_sombre : 'Tom Elvis Jedusor "Lord Voldemort"',
+        imagefront_perso_sombre : 'img/voldemort.png',
     },
     {
         id:1,
-        txt : 'Minerva McGonagall',
-        imagefront : 'img/McGonagall.png'
+        txt_perso_sombre : 'Nagini',
+        imagefront_perso_sombre : 'img/FondNagini.png'
     },
     {
         id:2,
-        txt : 'Rubeus Hagrid',
-        imagefront : 'img/Hagrid.png'
+        txt_perso_sombre : 'Gellert Grindelwald',
+        imagefront_perso_sombre : 'img/grindelwald.png'
     },
     {
         id:3,
-        txt : 'Alastor Maugrey "Fol Œil"',
-        imagefront: 'img/Maugrey.png'
+        txt_perso_sombre : 'Bellatrix Lestrange',
+        imagefront_perso_sombre: 'img/fondBellatrix.png'
     },
     {
         id:4,
-        txt : 'Remus John Lupin',
-        imagefront : 'img/Lupin.png'
+        txt_perso_sombre : 'Rodolphus Lestrange',
+        imagefront_perso_sombre : 'img/rodolphus.png'
     },
     {
         id:5,
-        txt : 'Garrick Ollivander',
-        imagefront : 'img/Olivander.png'
+        txt_perso_sombre : 'Quirinus Quirrell',
+        imagefront_perso_sombre : 'img/quirrell.png'
     },
     {
         id:6,
-        txt : 'Harry James Potter',
-        imagefront : 'img/HarryPotter.png'
+        txt_perso_sombre : 'Fenrir Greyback',
+        imagefront_perso_sombre : 'img/Fenrir.png'
     },
     {
         id:7,
-        txt : 'Hermione Jean Granger',
-        imagefront : 'img/HermioneGranger.png'
+        txt_perso_sombre : 'Peter Pettigrow',
+        imagefront_perso_sombre : 'img/PeterPetitgrow.png'
     },
     {
         id:8,
-        txt : 'Ronald Bilius Weasley',
-        imagefront : 'img/Ron.png'
+        txt_perso_sombre : 'Barty Croupton Junior',
+        imagefront_perso_sombre : 'img/Barty_Croupton_Jr2.png'
     },
     {
         id:9,
-        txt : 'Ginny Weasley/Potter',
-        imagefront : 'img/Ginny.png'
+        txt_perso_sombre : 'Igor Karkaroff',
+        imagefront_perso_sombre : 'img/karkaroff.png'
     },
     {
         id:10,
-        txt : 'Fred et George Weasley',
-        imagefront : 'img/FredGeorge.png'
+        txt_perso_sombre : 'Lucius Malefoy',
+        imagefront_perso_sombre : 'img/Lucius-Malfoy.png'
     },
     {
         id:11,
-        txt : 'Luna Dragonneau /Lovegood',
-        imagefront : 'img/LunaLovegood.png'
-    },
-    {
-        id:12,
-        txt : 'Neville Londubat',
-        imagefront : 'img/Longbottom.png'
-    },
-    {
-        id:13,
-        txt : 'Dobby',
-        imagefront: 'img/Dobby.png'
+        txt_perso_sombre : 'Drago Malefoy',
+        imagefront_perso_sombre : 'img/Draco.png'
     }
 ]
 
-class Gallery extends React.Component {
+class PersoSombre extends React.Component {
   state = {
     galleryItems: datas.map((i) => /* défini l'imagefront et le txt sur chaque id de carte (i+1)*/
-    (<Card key={i}> <img src={i.imagefront}></img>{i.txt}</Card>)),
+    (<CardPersoSombre key={i}> <img src={i.imagefront_perso_sombre}></img>{i.txt_perso_sombre}</CardPersoSombre>)),
   }
 
   //définie le nombre de slide apparente par rapport à la taille de l'écran
@@ -135,6 +125,12 @@ class Gallery extends React.Component {
     800: { items: 2 },
     1200:{ items: 3 },
     1500: {items: 4 },
+  }
+
+  stagePadding = {
+      paddingLeft:"0",
+      paddingRight:"0",
+      paddingBottom:"80px",
   }
  //paramètre de base des slides d'alice-carousel
   onSlideChange(e) {
@@ -171,4 +167,4 @@ class Gallery extends React.Component {
     )
   }
 }
-export default Gallery
+export default PersoSombre

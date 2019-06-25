@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Section from './Section'
 import Bouton_fleche from './Bouton_fleche'
-import Gallery from './carousel'
+
 
 import NavbarLight from './navbarLight';
 import NavbarDark from './navbarDark';
@@ -35,7 +35,7 @@ class App extends React.Component {
 
 
     <Bouton_fleche></Bouton_fleche>
-    <Gallery></Gallery>
+    
     
     </div>
        

@@ -5,6 +5,8 @@ import Tache from "./assets/img/ink_corner.png";
 import TacheWhite from "./assets/img/ink_corner_white.png";
 import "./Section.css";
 import { NONAME } from "dns";
+import Gallery from './carousel'
+import PersoSombre from "./carousel_perso_sombre";
 
 const divStyle = {
   backgroundImage : "url(" + Background + ")",
@@ -124,9 +126,9 @@ class Section extends React.Component {
       <img alt="" src={Quote} style={ quoteStyle }></img>
       </div>
         <div className="section1light">
-          <div style={divStyle}/>
           <div style={divStyle} />
-          <div style={divStyle} />
+          <div style={divStyle}><Gallery></Gallery></div>
+          <div style={divStyle}><PersoSombre></PersoSombre></div>
           <img alt="" className={this.state.animationisplaying===1? " imgblack invisible" : "imgblack visible"} src={Tache} style={tacheStyle} />
           <div style={{position:"fixed"}}
             onClick={e => this.Clickopen(e)}
