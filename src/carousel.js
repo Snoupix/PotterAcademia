@@ -10,11 +10,10 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 const styleButtonPrev={
     display:"flex",
     position: "absolute",
-    top: "1255px",
     left: "10px",
     cursor:"pointer",
     borderRadius:"50%",
-    color:"blue",
+    color:"black",
     backgroundColor : "transparent",
     width : "36px",
     height : "36px",
@@ -27,11 +26,10 @@ const styleButtonPrev={
 const styleButtonNext={
     display:"flex",
     position: "absolute",
-    top: "1255px",
     right: "10px",
     cursor:"pointer",
     borderRadius:"50%",
-    color:"blue",
+    color:"black",
     backgroundColor : "transparent",
     width : "36px",
     height : "36px",
@@ -161,7 +159,6 @@ class Gallery extends React.Component {
         dotsDisabled={true}
         fadeOutAnimation={true}
         mouseDragEnabled={true}
-        items={this.state.galleryItems}
         ref={(el) => (this.Carousel = el)}
       ></AliceCarousel>
       {/*bouton previous et next, on peut définir leur image ici et leur objet de style */}

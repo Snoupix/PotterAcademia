@@ -1,19 +1,19 @@
 import React from 'react'
 import AliceCarousel from 'react-alice-carousel'
 import "react-alice-carousel/lib/alice-carousel.css"
-import CardPersoSombre from './card_perso_sombre'
+import Card_perso_sombre from './card_perso_sombre'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 //style bouton previous
-const styleButtonPrev={
+const styleButtonPrev2={
     display:"flex",
     position: "absolute",
     left: "10px",
     cursor:"pointer",
     borderRadius:"50%",
-    color:"blue",
+    color:"white",
     backgroundColor : "transparent",
     width : "36px",
     height : "36px",
@@ -23,13 +23,13 @@ const styleButtonPrev={
 }
 
 //style bouton next
-const styleButtonNext={
+const styleButtonNext2={
     display:"flex",
     position: "absolute",
     right: "10px",
     cursor:"pointer",
     borderRadius:"50%",
-    color:"blue",
+    color:"white",
     backgroundColor : "transparent",
     width : "36px",
     height : "36px",
@@ -44,8 +44,6 @@ const styleCarou={
     paddingTop: "15px",
     paddingRight: "70px",
     zIndex:"300",
-    height:"auto",
-    width:"auto"
 
 }
 
@@ -113,10 +111,10 @@ const datas = [
     }
 ]
 
-class PersoSombre extends React.Component {
+class Carou_perso_sombre extends React.Component {
   state = {
     galleryItems: datas.map((i) => /* défini l'imagefront et le txt sur chaque id de carte (i+1)*/
-    (<CardPersoSombre key={i}> <img src={i.imagefront_perso_sombre}></img>{i.txt_perso_sombre}</CardPersoSombre>)),
+    (<Card_perso_sombre key={i}> <img src={i.imagefront_perso_sombre}></img>{i.txt_perso_sombre}</Card_perso_sombre>)),
   }
 
   //définie le nombre de slide apparente par rapport à la taille de l'écran
@@ -125,12 +123,6 @@ class PersoSombre extends React.Component {
     800: { items: 2 },
     1200:{ items: 3 },
     1500: {items: 4 },
-  }
-
-  stagePadding = {
-      paddingLeft:"0",
-      paddingRight:"0",
-      paddingBottom:"80px",
   }
  //paramètre de base des slides d'alice-carousel
   onSlideChange(e) {
@@ -157,14 +149,13 @@ class PersoSombre extends React.Component {
         dotsDisabled={true}
         fadeOutAnimation={true}
         mouseDragEnabled={true}
-        items={this.state.galleryItems}
         ref={(el) => (this.Carousel = el)}
       ></AliceCarousel>
       {/*bouton previous et next, on peut définir leur image ici et leur objet de style */}
-        <div onClick={() => this.Carousel._slidePrev()} style={styleButtonPrev}><FontAwesomeIcon icon={faAngleLeft}/></div>
-        <div onClick={() => this.Carousel._slideNext()} style={styleButtonNext}><FontAwesomeIcon icon={faAngleRight}/></div>
+        <div onClick={() => this.Carousel._slidePrev()} style={styleButtonPrev2}><FontAwesomeIcon icon={faAngleLeft}/></div>
+        <div onClick={() => this.Carousel._slideNext()} style={styleButtonNext2}><FontAwesomeIcon icon={faAngleRight}/></div>
       </div>
     )
   }
 }
-export default PersoSombre
+export default Carou_perso_sombre

@@ -10,12 +10,13 @@ const FrontStyle2 = {
 //style du texte
 const txtStyle2={
   verticalAlign:"center",
+  textAlign:"center",
   margin: "auto",
   fontFamily: "IM Fell DW Pica SC",
   color:"black",
-  fontSize:"22px",
+  fontSize:"28px",
   width: "54%",
-  margin: "auto",
+  marginLeft:"40px"
 }
 
 //style arrière carte
@@ -23,9 +24,11 @@ const BackStyle2 = {
     backgroundImage: "url(/img/DosWanted.png)",
     boxShadow:'none',
     display:"flex",
-    width: "165%",
+    backgroundRepeat:"no-repeat",
+    height: "371px",
+  marginLeft: "27px",
 }
-class CardPersoSombre extends React.Component {
+class Card_perso_sombre extends React.Component {
       render() {    
         return (
           console.log(this.props.children),
@@ -36,7 +39,7 @@ class CardPersoSombre extends React.Component {
             ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
             // if you pass isFlipped prop component will be controlled component.
             // and other props, which will go to div
-        style={{ width: '150px', height: '287px', boxShadow:'none'}} /// these are optional style, it is not necessary
+        style={{ width: '300px', height: '287px', boxShadow:'none'}} /// these are optional style, it is not necessary
           >
           {/* avant de la carte */}
             <FrontSide style={FrontStyle2}>
@@ -57,4 +60,4 @@ class CardPersoSombre extends React.Component {
         )
         }
         }
-        export default CardPersoSombre
+        export default Card_perso_sombre

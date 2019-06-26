@@ -15,7 +15,6 @@ const txtStyle={
   color:"#ECD849",
   fontSize:"22px",
   width: "54%",
-  margin: "auto",
 }
 
 //style arrière carte
