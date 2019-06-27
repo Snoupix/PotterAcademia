@@ -21,10 +21,12 @@ const Divreliques2 = {
     marginTop : "160px",
     marginLeft : "140px",
     flexDirection: "column",
+
 }
 const Imgreliques = {
     maxWidth : "90%",
     margin : "auto",
+    boxShadow : "0px 0px 20px 10px grey"
 }
 const Divempty = {
     width : "50%",
