@@ -20,7 +20,7 @@ const styleButtonPrev2={
     justifyContent : "center",
     alignItems : "center",
     boxShadow: "2px 2px 2px 1px rgba(55, 55, 55, 55)",
-    top : "294px"
+    top : "1520px"
 
 }
 
@@ -38,7 +38,7 @@ const styleButtonNext2={
     justifyContent : "center",
     alignItems : "center",
     boxShadow: "2px 2px 2px 1px rgba(55, 55, 55, 55)",
-    top : "294px"
+    top : "1520px"
 }
 //style du carousel ( taille, position, etc...)
 const styleCarou={
@@ -147,6 +147,11 @@ class Carou_perso_sombre extends React.Component {
   render() {
     return (
         //div qui défini le nom de la variable où le style sera paramètrable
+        <div>
+        <div id="personnagessombres" style={{marginTop : -140, width : "100%", height : 50}}></div>
+        <div  style={{margin: "-21px"}}>
+            <h1 style={{fontFamily : "IM Fell DW Pica SC", fontSize : "55px"}}>Personnages</h1>
+        </div>
         <div style={styleCarou}>
       <AliceCarousel
       //Certains des paramètres que permet la librairie AliceCarousel
@@ -163,6 +168,7 @@ class Carou_perso_sombre extends React.Component {
       {/*bouton previous et next, on peut définir leur image ici et leur objet de style */}
         <div onClick={() => this.Carousel._slidePrev()} style={styleButtonPrev2}><FontAwesomeIcon icon={faAngleLeft}/></div>
         <div onClick={() => this.Carousel._slideNext()} style={styleButtonNext2}><FontAwesomeIcon icon={faAngleRight}/></div>
+      </div>
       </div>
     )
   }

@@ -26,7 +26,7 @@ const Divreliques2 = {
 const Imgreliques = {
     maxWidth : "90%",
     margin : "auto",
-    boxShadow : "0px 0px 20px 10px grey"
+    boxShadow : "0px 0px 20px 10px #666666"
 }
 const Divempty = {
     width : "50%",

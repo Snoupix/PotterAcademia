@@ -18,16 +18,20 @@ class Maisons extends Component{
       </div>
       <div style={MaisonsStyle}>
       <div className="gryffondor transitioncolor">
-        <img src="img/gryffindor.png" alt="banniere" style={{width: '150px'}}/>
+        <img src="img/gryffindor.png" alt="banniere"/>
+        <h2 style={{fontFamily : "IM Fell DW Pica SC", letterSpacing : 10}}>Gryffondor</h2>
       </div>
       <div className="Serpentar transitioncolor">
-      <img src="img/SerpentarNB.png" style={{width: '150px'}}/>
+      <img src="img/SerpentarNB.png"/>
+      <h2 style={{fontFamily : "IM Fell DW Pica SC", letterSpacing : 10}}>Serpentard</h2>
       </div>
         <div className="RavenClaw transitioncolor">
-        <img src="img/RavenClaw.png" style={{width: '150px'}}/>
+        <img src="img/RavenClaw.png"/>
+        <h2 style={{fontFamily : "IM Fell DW Pica SC", letterSpacing : 10}}>Serdaigle</h2>
         </div>
         <div className="HufflePuff transitioncolor">
-        <img src="img/HufflePuff2.png" style={{width: '150px'}}/>
+        <img src="img/HufflePuff2.png"/>
+        <h2 style={{fontFamily : "IM Fell DW Pica SC", letterSpacing : 10}}>Poufsouffle</h2>
         </div>
       </div>
       </Fragment>

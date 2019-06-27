@@ -8,7 +8,9 @@ import "./Section.css";
 import { NONAME } from "dns";
 import Gallery from './carousel'
 import Carou_perso_sombre from "./carousel_perso_sombre";
-import Maisons from "./Maison"
+import Maisons from "./Maison";
+import Marquemangemort from "./assets/img/Mangemortmarque.png";
+
 
 const divStyle = {
   backgroundImage : "url(" + Background + ")",
@@ -47,13 +49,6 @@ const divStyle2 = {
   paddingTop: "100px"
 
 }
-const persosdarkinvisible = {
-  display : "none",
-}
-const persosdarkvisible = {
-  display : "block",
-}
-
 
 const transitionLayer = document.getElementsByClassName("cd-transition-layer")
 
@@ -70,7 +65,6 @@ class Section extends React.Component {
   };
 
   componentDidMount() {
-    console.log(transitionLayer)
     document.getElementsByClassName('bg-layer')[0].addEventListener('animationend', function(){
       transitionLayer[0].classList.remove('closing', 'opening',);})
       document.getElementsByClassName('cd-modal')[0].addEventListener('animationend', function(){
@@ -94,9 +88,8 @@ class Section extends React.Component {
 
   render() {
     return (
-    
       <div className="App" animation={this.state.animationisplaying}>
-      <div className={this.state.animationisplaying===0? "cd-modal" : this.state.animationisplaying===1? "cd-modal visible" : this.state.animationisplaying===2? "cd-modal" : ""} style={this.state.animationisplaying===0? Pavu : Vu  }>
+      <div className={this.state.animationisplaying===0? "cd-modal" : this.state.animationisplaying===1? "cd-modal visible" : this.state.animationisplaying===2? "cd-modal" : ""}>
 	<div className="modal-content">
 		<img alt="" className={this.state.animationisplaying===1? "imgwhite visible" : "imgwhite invisible"} src={TacheWhite} style={tacheStyleWhite} />
     <div
@@ -104,6 +97,9 @@ class Section extends React.Component {
             onClick={e => this.Clickclose(e)}
             className={this.state.animationisplaying===1? "cd-btn cd-modal-trigger visible" : "cd-btn cd-modal-trigger"}
           >
+    </div>
+    <div id="accueildark" className={"divsombresection"} style={{width: "100%",height: "1100px"}}>
+    <img className={this.state.animationisplaying===1? "mangemort fadein" : "mangemort fadeout"} src={Marquemangemort}></img>
     </div>
     <div className={"divsombresection persosdark"} style={{width: "100%",height: "600px",margin: "auto",paddingTop: "100px"}}><Carou_perso_sombre></Carou_perso_sombre></div>
     <div className={"divsombresection"}><Sectionrelique></Sectionrelique></div>
@@ -120,10 +116,11 @@ class Section extends React.Component {
         } style={{opacity : this.state.animationisplaying===0? "" :  this.state.x}}
       >
       <div style={{marginTop : "18%", display : "flex", position : "absolute", width : "100%", justifyContent : "center"}}>
-      <img alt="" src={Quote} style={ quoteStyle }></img>
+      <img alt="" src={Quote} style={this.state.animationisplaying===0? quoteStyle : this.state.animationisplaying===2? quoteStyle : Pavu}></img>
       </div>
-        <div className="section1light">
-          <div id="acceuil" style={divStyle}/>
+        <div className="section1light" style={this.state.animationisplaying===0? Vu : this.state.animationisplaying===2? Vu : Pavu}>
+          <div id="acceuil" style={divStyle}>
+          </div>
           <div style={divStyle2}> <Gallery></Gallery></div>
           <div style={divStyle}><Maisons></Maisons></div>
           <img alt="" className={this.state.animationisplaying===1? " imgblack invisible" : "imgblack visible"} src={Tache} style={tacheStyle} />

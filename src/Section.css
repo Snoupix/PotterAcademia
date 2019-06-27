@@ -8,6 +8,24 @@ header{
   z-index: 4;
   width: 100%
 }
+.mangemort{
+  transition : opacity 4s ease-in-out;
+  margin-top : 200px;
+  opacity: 0;
+}
+.mangemort.fadeout{
+  transition : opacity 4s ease-in-out;
+  opacity : 0
+}
+.mangemort.fadein{
+  transition : opacity 4s ease-in-out;
+  opacity : 1
+}
+/* .mangemort2{
+  transition : opacity 2s ease-in-out;
+  opacity : 0;
+  margin-top : 200px;
+} */
 
 .Stylefeetbase{
   opacity : 0;
@@ -32,10 +50,10 @@ header{
   background-size: cover;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 3s 3s, visibility 3s 3s;
-  -moz-transition: opacity 3s 3s, visibility 3s 3s;
-  transition: opacity 3s 3s, visibility 3s 3s;
-   display: none 
+  -webkit-transition: opacity 0.6s 0.6s, visibility 0.6s 0.6s;
+  -moz-transition: opacity 0.6s 0.6s, visibility 0.6s 0.6s;
+  transition: opacity 0.6s 0.6s, visibility 0.6s 0.6s;
+  position: absolute;
 }
 .divsombresection{
   background: url(./assets/img/modal-bg.png) no-repeat;
@@ -102,12 +120,13 @@ header{
   background-color: rgba(0, 0, 0, 0.5);
 }
 .cd-modal.visible {
-  -webkit-transition: opacity 3s 3s, visibility 3s 3s;
-  -moz-transition: opacity 3s 3s, visibility 3s 3s;
-  transition: opacity 3s 3s, visibility 3s 3s;
+  -webkit-transition: opacity 0.3s 0.3s, visibility 0.3s 0.3s;
+  -moz-transition: opacity 0.3s 0.3s, visibility 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s, visibility 0.3s 0.3s;
   opacity: 1;
   visibility: visible;
   display: block;
+  position: relative;
 }
 .cd-modal.visible .modal-content {
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
@@ -138,7 +157,6 @@ header{
 .invisible{
   visibility: hidden;
 }
-
 .transitioncolor img{
   
     -webkit-filter: grayscale(100%);
@@ -181,9 +199,6 @@ Transition Layer
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
-  }
-  .bg-layer{
-    z-index:-500;
   }
   .cd-transition-layer .bg-layer {
     left: 50%;

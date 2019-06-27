@@ -9,20 +9,20 @@ export default class NavbarDark extends Component{
             <nav style={{zIndex : "10"}}>
                 <DarkNavbutton>
                     <span className="inkSpan">Accueil</span>
-                    <button className="inkButton">Accueil</button>
+                    <a href="#accueildark"><button className="inkButton">Accueil</button></a>
                 </DarkNavbutton>
                 <DarkNavbutton>
                     <span className="inkSpan">Personnages</span>
-                    <button className="inkButton">Personnages</button>
+                    <a href="#personnagessombres"><button className="inkButton">Personnages</button></a>
                 </DarkNavbutton>
-                <DarkNavbutton>
+                {/* <DarkNavbutton>
                     <span className="inkSpan">Potions</span>
-                    <button className="inkButton">Potions</button>
-                </DarkNavbutton>
-                <DarkNavbutton>
+                    <a href="#potionsdark"><button className="inkButton">Potions</button></a>
+                </DarkNavbutton> */}
+               {/*  <DarkNavbutton>
                     <span className="inkSpan">Sorts</span>
-                    <button className="inkButton">Sorts</button>
-                </DarkNavbutton>
+                    <a href="#sortsdark"><button className="inkButton">Sorts</button></a>
+                </DarkNavbutton> */}
                 <DarkNavbutton>
                     <span className="inkSpan reliques">Reliques de la mort</span>
                     <a href="#reliques"><button className="inkButton">Reliques de la mort</button></a>
