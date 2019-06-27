@@ -46,6 +46,12 @@ const divStyle2 = {
   paddingTop: "100px"
 
 }
+const persosdarkinvisible = {
+  display : "none",
+}
+const persosdarkvisible = {
+  display : "block",
+}
 
 
 const transitionLayer = document.getElementsByClassName("cd-transition-layer")
@@ -76,8 +82,7 @@ class Section extends React.Component {
   Clickopen(e) {
     e.preventDefault();
     this.props.changeState()
-    this.setState({ animationisplaying: 1 })
-
+    this.setState({ animationisplaying: 1 });
   }
 
   Clickclose(e) {
@@ -87,7 +92,6 @@ class Section extends React.Component {
   }
 
   render() {
-
     return (
     
       <div className="App" animation={this.state.animationisplaying}>
@@ -100,7 +104,10 @@ class Section extends React.Component {
             className={this.state.animationisplaying===1? "cd-btn cd-modal-trigger visible" : "cd-btn cd-modal-trigger"}
           >
     </div>
-    <Sectionrelique></Sectionrelique>
+    <div className={"divsombresection persosdark"} style={{width: "100%",height: "600px",margin: "auto",paddingTop: "100px"}}><Carou_perso_sombre></Carou_perso_sombre></div>
+    <div className={"divsombresection"}><Sectionrelique></Sectionrelique></div>
+    
+
 	</div>
   </div>
       <div
@@ -117,9 +124,8 @@ class Section extends React.Component {
         <div className="section1light">
           <div id="acceuil" style={divStyle}/>
           <div style={divStyle2}> <Gallery></Gallery></div>
+          <div style={divStyle}></div>
           <div style={divStyle} />
-          <div style={divStyle}><Gallery></Gallery></div>
-          <div style={divStyle}><Carou_perso_sombre></Carou_perso_sombre></div>
           <img alt="" className={this.state.animationisplaying===1? " imgblack invisible" : "imgblack visible"} src={Tache} style={tacheStyle} />
           <div style={{position:"absolute"}}
             onClick={e => this.Clickopen(e)}

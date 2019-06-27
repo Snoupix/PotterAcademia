@@ -37,7 +37,7 @@ class Sectionrelique extends React.Component {
 
     render() {
         return (
-            <div id="reliques" style={{marginTop : "200px", fontFamily : "IM Fell DW Pica SC"}}>
+            <div id="reliques" style={{marginTop : "-40px",paddingTop : "200px", fontFamily : "IM Fell DW Pica SC"}}>
             <h1 style={{fontSize : "55px"}} href="reliques">Les Reliques de la Mort</h1>
             <div style={{display : "flex"}}>
             <div style={Divreliques}>

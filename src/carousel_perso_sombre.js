@@ -20,6 +20,8 @@ const styleButtonPrev2={
     justifyContent : "center",
     alignItems : "center",
     boxShadow: "2px 2px 2px 1px rgba(55, 55, 55, 55)",
+    top : "294px"
+
 }
 
 //style bouton next
@@ -36,6 +38,7 @@ const styleButtonNext2={
     justifyContent : "center",
     alignItems : "center",
     boxShadow: "2px 2px 2px 1px rgba(55, 55, 55, 55)",
+    top : "294px"
 }
 //style du carousel ( taille, position, etc...)
 const styleCarou={
@@ -112,9 +115,15 @@ const datas = [
 ]
 
 class Carou_perso_sombre extends React.Component {
+
   state = {
     galleryItems: datas.map((i) => /* défini l'imagefront et le txt sur chaque id de carte (i+1)*/
-    (<Card_perso_sombre key={i}> <img src={i.imagefront_perso_sombre}></img>{i.txt_perso_sombre}</Card_perso_sombre>)),
+    (<Card_perso_sombre  key={i}> <img src={i.imagefront_perso_sombre}></img>{i.txt_perso_sombre}</Card_perso_sombre>)),
+    isLoading : false
+  }
+
+  componentDidMount() {
+  
   }
 
   //définie le nombre de slide apparente par rapport à la taille de l'écran

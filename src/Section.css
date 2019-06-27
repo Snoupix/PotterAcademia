@@ -35,10 +35,20 @@ header{
   -webkit-transition: opacity 3s 3s, visibility 3s 3s;
   -moz-transition: opacity 3s 3s, visibility 3s 3s;
   transition: opacity 3s 3s, visibility 3s 3s;
-  display: none
+   display: none 
+}
+.divsombresection{
+  background: url(./assets/img/modal-bg.png) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 3000px;
+}
+.persosdark{
+  height : 600px;
+  margin : auto;
+  padding-top: 100px;
 }
 .cd-modal .modal-content {
-  background: url(./assets/img/modal-bg.png) no-repeat;
   height: 100%;
   color: #e4dcca;
   -webkit-font-smoothing: antialiased;
@@ -97,7 +107,6 @@ header{
   transition: opacity 3s 3s, visibility 3s 3s;
   opacity: 1;
   visibility: visible;
-  cursor: none;
   display: block;
 }
 .cd-modal.visible .modal-content {
@@ -148,9 +157,6 @@ Transition Layer
 }
 .visible{
   display: block;
-}
-.imgwhite{
-  cursor: none;
 }
 .cd-transition-layer {
     top: 0;

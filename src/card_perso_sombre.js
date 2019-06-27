@@ -31,7 +31,7 @@ const BackStyle2 = {
 class Card_perso_sombre extends React.Component {
       render() {    
         return (
-          console.log(this.props.children),
+            
             <Flippy
             flipOnHover={true}
             flipOnClick={false}
@@ -39,7 +39,7 @@ class Card_perso_sombre extends React.Component {
             ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
             // if you pass isFlipped prop component will be controlled component.
             // and other props, which will go to div
-        style={{ width: '300px', height: '287px', boxShadow:'none'}} /// these are optional style, it is not necessary
+            style={{ width: 300,height: 287, boxShadow:'none'}} /// these are optional style, it is not necessary
           >
           {/* avant de la carte */}
             <FrontSide style={FrontStyle2}>
