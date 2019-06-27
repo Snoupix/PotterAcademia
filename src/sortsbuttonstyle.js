@@ -10,7 +10,7 @@ button {
     height: 50px;
     font-size: 20px;
     border: none;
-    color: #fff;
+    color: #000;
     font-family: 'IM Fell DW Pica SC', serif;
     cursor: pointer;
     -webkit-transition: opacity 1s ease-in-out;

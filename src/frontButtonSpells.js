@@ -4,8 +4,9 @@ import './sorts.css';
 export default class FrontButton extends React.Component {
 
     render(){
+        
         return(
-            <button className="frontButton">{this.props.txt}</button>
+            <button className="frontButton" style={{backgroundImage:(`url(${this.props.img}`)}}></button>
         )
     }
 }

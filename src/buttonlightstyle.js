@@ -12,6 +12,7 @@ const LightNavbutton = styled.div`
     font-weight: 300;
     transition: 0.5s;
     letter-spacing: 1px;
+    user-select: none;
 
     button {
         width: 101%;

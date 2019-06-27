@@ -5,7 +5,6 @@ import Tache from "./assets/img/ink_corner.png";
 import TacheWhite from "./assets/img/ink_corner_white.png";
 import "./Section.css";
 import Sorts from './sorts';
-import { NONAME } from "dns";
 
 const divStyle = {
   backgroundImage : "url(" + Background + ")",

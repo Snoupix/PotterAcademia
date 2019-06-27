@@ -1,4 +1,4 @@
-+import React, { Component } from 'react';
+import React, { Component } from 'react';
 import DarkNavbutton from './buttondarkstyle';
 export default class NavbarDark extends Component{
 

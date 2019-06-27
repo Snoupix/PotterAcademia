@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Section from './Section';
-import Gallery from './carousel';
 import Sorts from './sorts';
 
 import NavbarLight from './navbarLight';
