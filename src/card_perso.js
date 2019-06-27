@@ -15,7 +15,6 @@ const txtStyle={
   color:"#ECD849",
   fontSize:"22px",
   width: "54%",
-  margin: "auto",
 }
 
 //style arrière carte
@@ -42,7 +41,7 @@ class Card extends React.Component {
               <div>
               {/* appel de la propriété parente pour éviter de faire chaque carte une par une */}
               {this.props.children[1]}
-              </div>
+              </div> 
             </FrontSide>
             {/* arrière de la carte */}
             <BackSide
