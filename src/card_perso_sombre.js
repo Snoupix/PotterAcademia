@@ -31,7 +31,6 @@ const BackStyle2 = {
 class Card_perso_sombre extends React.Component {
       render() {    
         return (
-          console.log(this.props.children),
             <Flippy
             flipOnHover={true}
             flipOnClick={false}

@@ -124,16 +124,7 @@ class Carou_perso_sombre extends React.Component {
     1200:{ items: 3 },
     1500: {items: 4 },
   }
- //paramètre de base des slides d'alice-carousel
-  onSlideChange(e) {
-    console.debug('Item`s position during a change: ', e.item)
-    console.debug('Slide`s position during a change: ', e.slide)
-  }
- 
-  onSlideChanged(e) {
-    console.debug('Item`s position after changes: ', e.item)
-    console.debug('Slide`s position after changes: ', e.slide)
-  }
+
  
   render() {
     return (
@@ -147,7 +138,6 @@ class Carou_perso_sombre extends React.Component {
         fadeOutAnimation={true}
         keysControlDisabled={false}
         dotsDisabled={true}
-        fadeOutAnimation={true}
         mouseDragEnabled={true}
         ref={(el) => (this.Carousel = el)}
       ></AliceCarousel>
