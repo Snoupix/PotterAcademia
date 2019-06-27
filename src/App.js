@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Section from './Section'
 
+import Bouton_fleche from './Bouton_fleche'
 
 
 import NavbarLight from './navbarLight';
@@ -34,6 +35,8 @@ class App extends React.Component {
     <Section changeState={(e)=>this.changeState()} ></Section>
 
 
+    <Bouton_fleche></Bouton_fleche>
+    
     
     </div>
        

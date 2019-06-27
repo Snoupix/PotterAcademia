@@ -5,7 +5,9 @@ import Tache from "./assets/img/ink_corner.png";
 import TacheWhite from "./assets/img/ink_corner_white.png";
 import Sectionrelique from './Sectionrelique'
 import "./Section.css";
+import { NONAME } from "dns";
 import Gallery from './carousel'
+import Carou_perso_sombre from "./carousel_perso_sombre";
 
 const divStyle = {
   backgroundImage : "url(" + Background + ")",
@@ -116,6 +118,8 @@ class Section extends React.Component {
           <div id="acceuil" style={divStyle}/>
           <div style={divStyle2}> <Gallery></Gallery></div>
           <div style={divStyle} />
+          <div style={divStyle}><Gallery></Gallery></div>
+          <div style={divStyle}><Carou_perso_sombre></Carou_perso_sombre></div>
           <img alt="" className={this.state.animationisplaying===1? " imgblack invisible" : "imgblack visible"} src={Tache} style={tacheStyle} />
           <div style={{position:"absolute"}}
             onClick={e => this.Clickopen(e)}
