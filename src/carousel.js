@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import AliceCarousel from 'react-alice-carousel'
 import "react-alice-carousel/lib/alice-carousel.css"
 import Card from './card_perso'
@@ -20,6 +20,8 @@ const styleButtonPrev={
     justifyContent : "center",
     alignItems : "center",
     boxShadow: "2px 2px 2px 1px rgba(55, 55, 55, 55)",
+    top: "1436px"
+
 }
 
 //style bouton next
@@ -36,11 +38,12 @@ const styleButtonNext={
     justifyContent : "center",
     alignItems : "center",
     boxShadow: "2px 2px 2px 1px rgba(55, 55, 55, 55)",
+    top: "1436px"
+
 }
 //style du carousel ( taille, position, etc...)
 const styleCarou={
     paddingLeft: "70px",
-    paddingRight: "55px",
     paddingTop: "15px",
     paddingRight: "70px",
     zIndex:"300",
@@ -118,13 +121,18 @@ const datas = [
         id:13,
         txt : 'Dobby',
         imagefront: 'img/Dobby.png'
+    },
+    {
+        id : 14,
+        txt : 'Severus Rogue',
+        imagefront : 'img/SeverusRogue.png'
     }
 ]
 
 class Gallery extends React.Component {
   state = {
     galleryItems: datas.map((i) => /* défini l'imagefront et le txt sur chaque id de carte (i+1)*/
-    (<Card key={i}> <img src={i.imagefront}></img>{i.txt}</Card>)),
+    (<Card key={i}> <img alt="" src={i.imagefront}></img>{i.txt}</Card>)),
   }
 
   //définie le nombre de slide apparente par rapport à la taille de l'écran
@@ -138,6 +146,11 @@ class Gallery extends React.Component {
   render() {
     return (
         //div qui défini le nom de la variable où le style sera paramètrable
+        <Fragment>
+        <div id="personnages" style={{position : "absolute", top : "1000px", }}></div>
+        <div  style={{margin: "-21px"}}>
+            <h1 style={{fontFamily : "IM Fell DW Pica SC", fontSize : "55px", marginTop : "0"}}>Personnages</h1>
+        </div>
         <div style={styleCarou}>
       <AliceCarousel
       //Certains des paramètres que permet la librairie AliceCarousel
@@ -154,6 +167,7 @@ class Gallery extends React.Component {
         <div onClick={() => this.Carousel._slidePrev()} style={styleButtonPrev}><FontAwesomeIcon icon={faAngleLeft}/></div>
         <div onClick={() => this.Carousel._slideNext()} style={styleButtonNext}><FontAwesomeIcon icon={faAngleRight}/></div>
       </div>
+      </Fragment>
     )
   }
 }
