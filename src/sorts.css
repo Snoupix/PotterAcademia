@@ -1,9 +1,7 @@
-.fade {
-    width:15px;
-    height:50px;
-    transition:all 0.5s ease;
-    background:blue;
+.frontButton {
+    background: linear-gradient(to top,#A8CABA 0%, #5D4157 100%);
 }
-.fade.fade-enter {
-    background:red;
+
+.backButton {
+    position: absolute;
 }

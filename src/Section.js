@@ -4,6 +4,7 @@ import Quote from "./assets/img/quote.png";
 import Tache from "./assets/img/ink_corner.png";
 import TacheWhite from "./assets/img/ink_corner_white.png";
 import "./Section.css";
+import Sorts from './sorts';
 import { NONAME } from "dns";
 
 const divStyle = {
@@ -127,8 +128,8 @@ class Section extends React.Component {
       </div>
         <div className="section1light">
           <div style={divStyle}/>
-          <div style={divStyle} />
-          <div style={divStyle} />
+          <div style={divStyle}/>
+          <div style={divStyle}><Sorts/></div>
           <img alt="" className={this.state.animationisplaying===1? " imgblack invisible" : "imgblack visible"} src={Tache} style={tacheStyle} />
           <div style={{position:"fixed"}}
             onClick={e => this.Clickopen(e)}

@@ -8,7 +8,6 @@ import NavbarLight from './navbarLight';
 import NavbarDark from './navbarDark';
 // import Mouse from './cursorDarkside';
 
-
 class App extends React.Component {
   state = {
     Visible : 1,
@@ -34,7 +33,7 @@ class App extends React.Component {
     <Section changeState={(e)=>this.changeState()} ></Section>
 
     <Sorts/>
-    <Gallery></Gallery>
+    {/* <Gallery></Gallery> */}
     
     </div>
        
