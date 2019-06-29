@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Section from './Section'
 import Bouton_fleche from './Bouton_fleche'
-import Section from './Section';
 
 import NavbarLight from './navbarLight';
 import NavbarDark from './navbarDark';
