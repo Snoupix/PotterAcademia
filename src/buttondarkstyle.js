@@ -8,10 +8,11 @@ const DarkNavbutton = styled.div`
     margin-right: 10px;
     margin-top: 5px;
     overflow: hidden;
-    border: 1px solid #fff;
+    // border: 1px solid #fff;
     font-weight: 300;
     transition: 0.5s;
     letter-spacing: 1px;
+    user-select: none;
 
     button {
         width: 101%;
@@ -19,13 +20,13 @@ const DarkNavbutton = styled.div`
         font-weight: 300;
         font-size: 20px;
         letter-spacing: 1px;
-        background: #000;
+        background: #fff; // 000
         -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
         mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
         -webkit-mask-size: 2300% 100%;
         mask-size: 2300% 100%;
         border: none;
-        color: #fff;
+        color: #000; // fff
         font-family: 'IM Fell DW Pica', serif;
         cursor: pointer;
         -webkit-animation: ani2 0.7s steps(22) forwards;
@@ -38,8 +39,8 @@ const DarkNavbutton = styled.div`
     }
     .inkSpan {
         position: absolute;
-        color: #000;
-        background: white;
+        color: #fff; // 000
+        background: transparent; // white
         text-align: center;
         width: 101%;
         height: 100%;
@@ -50,7 +51,6 @@ const DarkNavbutton = styled.div`
         font-family: 'IM Fell DW Pica', serif;
         // margin-top: 12px; // ${props => props.nomargintop ? '0px' : '12px'};
         overflow: hidden;
-        background-color : white;
         height : 100%;
         padding-top : 12px;
     }

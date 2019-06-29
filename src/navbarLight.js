@@ -23,8 +23,8 @@ export default class NavbarLight extends Component{
                     <button className="inkButton">Sorts</button>
                 </LightNavbutton>
                 <LightNavbutton>
-                    <span className="inkSpan">Écoles</span>
-                    <button className="inkButton">Écoles</button>
+                    <span className="inkSpan">Maisons</span>
+                    <button className="inkButton">Maisons</button>
                 </LightNavbutton>
             </nav>
         )

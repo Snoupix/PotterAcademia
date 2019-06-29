@@ -1,0 +1,58 @@
+/*Mettre les properties css à 0 pour pouvoir 
+collapse les cells*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+body {
+    line-height: 0;
+}
+.frontButton {
+}
+
+.backButton {
+    position: absolute;
+/*  background: linear-gradient(to top,#d3a253 0%,#e4c37d 45%,#e4c37d 55%, #d3a253 100%);*/
+    /* background: radial-gradient(#dacdb0, #d3a253); */
+    background-image: url(./assets/img/buttonsSortsBG.jpg);
+}
+.tableSorts{
+    overflow-x: auto;
+    margin: auto;
+    border-collapse: collapse;
+}
+.tableSorts tr:first-child td:first-child button{
+    border-top-left-radius: 25px;
+}
+.tableSorts tr:first-child td:last-child button{
+    border-top-right-radius: 25px;
+}
+/* Dernière ligne */
+.tableSorts tr:last-child td button{
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+/* Avant-dernière ligne */
+.tableSorts tr:nth-last-child(2) td:first-child button{
+    border-bottom-left-radius: 25px;
+}
+.tableSorts tr:nth-last-child(2) td:last-child button{
+    border-bottom-right-radius: 25px;
+}

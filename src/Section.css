@@ -1,4 +1,4 @@
-/* -------------------------------- 
++/* -------------------------------- 
 
 Modal window 
 
@@ -205,7 +205,10 @@ Transition Layer
   .no-cssanimations .cd-transition-layer {
     display: none;
   }
-  
+  .bg-layer{
+    z-index: -500;
+  }
+
   @-webkit-keyframes cd-sequence {
     0% {
       /* translateX(-2%) is used to horizontally center the first frame inside the viewport */
