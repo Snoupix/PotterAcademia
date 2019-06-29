@@ -12,6 +12,7 @@ import React, {Fragment} from 'react';
 import Buttonstyle from './sortsbuttonstyle';
 import FrontButton from './frontButtonSpells';
 import BackButton from './backButtonSpells';
+import './sorts.css';
 
 /* Backgrounds */
 
@@ -71,7 +72,7 @@ export default class Sorts extends React.Component {
       return (
         <Fragment>
           <div style={{marginBottom: "100px", paddingTop: "100px", fontSize: "30px", fontFamily: "IM Fell DW Pica SC, serif"}}>Sortilèges utilisés</div>
-          <table style={{margin: "auto", borderCollapse: "separate", borderSpacing: "20px"}}>
+          <table className="tableSorts">
             <tbody>
               <tr>
                 <Buttonstyle>
