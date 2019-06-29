@@ -26,7 +26,7 @@ const Divreliques2 = {
 const Imgreliques = {
     maxWidth : "90%",
     margin : "auto",
-    boxShadow : "0px 0px 20px 10px grey"
+    boxShadow : "0px 0px 20px 10px #666666"
 }
 const Divempty = {
     width : "50%",
@@ -37,7 +37,7 @@ class Sectionrelique extends React.Component {
 
     render() {
         return (
-            <div id="reliques" style={{marginTop : "200px", fontFamily : "IM Fell DW Pica SC"}}>
+            <div id="reliques" style={{marginTop : "-40px",paddingTop : "200px", fontFamily : "IM Fell DW Pica SC"}}>
             <h1 style={{fontSize : "55px"}} href="reliques">Les Reliques de la Mort</h1>
             <div style={{display : "flex"}}>
             <div style={Divreliques}>

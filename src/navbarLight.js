@@ -16,15 +16,15 @@ export default class NavbarLight extends Component{
                 </LightNavbutton>
                 <LightNavbutton>
                     <span className="inkSpan">Potions</span>
-                   <button className="inkButton">Potions</button>
+                   <a href="#potions"><button  className="inkButton">Potions</button></a>
                 </LightNavbutton>
                 <LightNavbutton>
                     <span className="inkSpan">Sorts</span>
-                    <button className="inkButton">Sorts</button>
+                    <a href="#sorts"><button className="inkButton">Sorts</button></a>
                 </LightNavbutton>
                 <LightNavbutton>
                     <span className="inkSpan">Maisons</span>
-                    <button className="inkButton">Maisons</button>
+                    <a href="#maisons"><button className="inkButton">Maisons</button></a>
                 </LightNavbutton>
             </nav>
         )
