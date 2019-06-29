@@ -30,9 +30,6 @@ class App extends React.Component {
     
     </header>
     <Section changeState={(e)=>this.changeState()} ></Section>
-
-    <Sorts/>
-    {/* <Gallery></Gallery> */}
     
     </div>
        
