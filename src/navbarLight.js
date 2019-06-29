@@ -8,15 +8,15 @@ export default class NavbarLight extends Component{
             <nav>
                 <LightNavbutton>
                     <span className="inkSpan">Accueil</span>
-                    <button className="inkButton">Accueil</button>
+                    <a href="#acceuil"><button className="inkButton">Accueil</button></a>
                 </LightNavbutton>
                 <LightNavbutton>
                     <span className="inkSpan">Personnages</span>
-                    <button className="inkButton">Personnages</button>
+                    <a href="#personnages"><button className="inkButton">Personnages</button></a>
                 </LightNavbutton>
                 <LightNavbutton>
                     <span className="inkSpan">Potions</span>
-                    <button className="inkButton">Potions</button>
+                   <button className="inkButton">Potions</button>
                 </LightNavbutton>
                 <LightNavbutton>
                     <span className="inkSpan">Sorts</span>

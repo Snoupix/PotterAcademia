@@ -1,48 +1,46 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import AliceCarousel from 'react-alice-carousel'
 import "react-alice-carousel/lib/alice-carousel.css"
-import Card from './card_perso'
+import Card_perso_sombre from './card_perso_sombre'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+
 //style bouton previous
-const styleButtonPrev={
+const styleButtonPrev2={
     display:"flex",
     position: "absolute",
     left: "10px",
     cursor:"pointer",
     borderRadius:"50%",
-    color:"black",
+    color:"white",
     backgroundColor : "transparent",
     width : "36px",
     height : "36px",
     justifyContent : "center",
     alignItems : "center",
     boxShadow: "2px 2px 2px 1px rgba(55, 55, 55, 55)",
-    top: "1436px"
-
 }
 
 //style bouton next
-const styleButtonNext={
+const styleButtonNext2={
     display:"flex",
     position: "absolute",
     right: "10px",
     cursor:"pointer",
     borderRadius:"50%",
-    color:"black",
+    color:"white",
     backgroundColor : "transparent",
     width : "36px",
     height : "36px",
     justifyContent : "center",
     alignItems : "center",
     boxShadow: "2px 2px 2px 1px rgba(55, 55, 55, 55)",
-    top: "1436px"
-
 }
 //style du carousel ( taille, position, etc...)
 const styleCarou={
     paddingLeft: "70px",
+    paddingRight: "55px",
     paddingTop: "15px",
     paddingRight: "70px",
     zIndex:"300",
@@ -53,85 +51,70 @@ const styleCarou={
 const datas = [
     {
         id:0,
-        txt : 'Albus Perceval Wulfric Brian Dumbledore',
-        imagefront : 'img/frontsidedolby.png',
+        txt_perso_sombre : 'Tom Elvis Jedusor "Lord Voldemort"',
+        imagefront_perso_sombre : 'img/voldemort.png',
     },
     {
         id:1,
-        txt : 'Minerva McGonagall',
-        imagefront : 'img/McGonagall.png'
+        txt_perso_sombre : 'Nagini',
+        imagefront_perso_sombre : 'img/FondNagini.png'
     },
     {
         id:2,
-        txt : 'Rubeus Hagrid',
-        imagefront : 'img/Hagrid.png'
+        txt_perso_sombre : 'Gellert Grindelwald',
+        imagefront_perso_sombre : 'img/grindelwald.png'
     },
     {
         id:3,
-        txt : 'Alastor Maugrey "Fol Œil"',
-        imagefront: 'img/Maugrey.png'
+        txt_perso_sombre : 'Bellatrix Lestrange',
+        imagefront_perso_sombre: 'img/fondBellatrix.png'
     },
     {
         id:4,
-        txt : 'Remus John Lupin',
-        imagefront : 'img/Lupin.png'
+        txt_perso_sombre : 'Rodolphus Lestrange',
+        imagefront_perso_sombre : 'img/rodolphus.png'
     },
     {
         id:5,
-        txt : 'Garrick Ollivander',
-        imagefront : 'img/Olivander.png'
+        txt_perso_sombre : 'Quirinus Quirrell',
+        imagefront_perso_sombre : 'img/quirrell.png'
     },
     {
         id:6,
-        txt : 'Harry James Potter',
-        imagefront : 'img/HarryPotter.png'
+        txt_perso_sombre : 'Fenrir Greyback',
+        imagefront_perso_sombre : 'img/Fenrir.png'
     },
     {
         id:7,
-        txt : 'Hermione Jean Granger',
-        imagefront : 'img/HermioneGranger.png'
+        txt_perso_sombre : 'Peter Pettigrow',
+        imagefront_perso_sombre : 'img/PeterPetitgrow.png'
     },
     {
         id:8,
-        txt : 'Ronald Bilius Weasley',
-        imagefront : 'img/Ron.png'
+        txt_perso_sombre : 'Barty Croupton Junior',
+        imagefront_perso_sombre : 'img/Barty_Croupton_Jr2.png'
     },
     {
         id:9,
-        txt : 'Ginny Weasley/Potter',
-        imagefront : 'img/Ginny.png'
+        txt_perso_sombre : 'Igor Karkaroff',
+        imagefront_perso_sombre : 'img/karkaroff.png'
     },
     {
         id:10,
-        txt : 'Fred et George Weasley',
-        imagefront : 'img/FredGeorge.png'
+        txt_perso_sombre : 'Lucius Malefoy',
+        imagefront_perso_sombre : 'img/Lucius-Malfoy.png'
     },
     {
         id:11,
-        txt : 'Luna Dragonneau /Lovegood',
-        imagefront : 'img/LunaLovegood.png'
-    },
-    {
-        id:12,
-        txt : 'Neville Londubat',
-        imagefront : 'img/Longbottom.png'
-    },
-    {
-        id:13,
-        txt : 'Dobby',
-        imagefront: 'img/Dobby.png'
-    },
-    {
-        id : 14,
-        txt : 'Severus Rogue',
-        imagefront : 'img/SeverusRogue.png'
+        txt_perso_sombre : 'Drago Malefoy',
+        imagefront_perso_sombre : 'img/Draco.png'
     }
 ]
 
-class Gallery extends React.Component {
+class Carou_perso_sombre extends React.Component {
   state = {
     galleryItems: datas.map((i) => /* défini l'imagefront et le txt sur chaque id de carte (i+1)*/
-    (<Card key={i}> <img alt="" src={i.imagefront}></img>{i.txt}</Card>)),
+    (<Card_perso_sombre key={i}> <img src={i.imagefront_perso_sombre}></img>{i.txt_perso_sombre}</Card_perso_sombre>)),
   }
 
   //définie le nombre de slide apparente par rapport à la taille de l'écran
@@ -155,11 +138,6 @@ class Gallery extends React.Component {
   render() {
     return (
         //div qui défini le nom de la variable où le style sera paramètrable
-        <Fragment>
-        <div id="personnages" style={{position : "absolute", top : "1000px", }}></div>
-        <div  style={{margin: "-21px"}}>
-            <h1 style={{fontFamily : "IM Fell DW Pica SC", fontSize : "55px", marginTop : "0"}}>Personnages</h1>
-        </div>
         <div style={styleCarou}>
       <AliceCarousel
       //Certains des paramètres que permet la librairie AliceCarousel
@@ -169,15 +147,15 @@ class Gallery extends React.Component {
         fadeOutAnimation={true}
         keysControlDisabled={false}
         dotsDisabled={true}
+        fadeOutAnimation={true}
         mouseDragEnabled={true}
         ref={(el) => (this.Carousel = el)}
       ></AliceCarousel>
       {/*bouton previous et next, on peut définir leur image ici et leur objet de style */}
-        <div onClick={() => this.Carousel._slidePrev()} style={styleButtonPrev}><FontAwesomeIcon icon={faAngleLeft}/></div>
-        <div onClick={() => this.Carousel._slideNext()} style={styleButtonNext}><FontAwesomeIcon icon={faAngleRight}/></div>
+        <div onClick={() => this.Carousel._slidePrev()} style={styleButtonPrev2}><FontAwesomeIcon icon={faAngleLeft}/></div>
+        <div onClick={() => this.Carousel._slideNext()} style={styleButtonNext2}><FontAwesomeIcon icon={faAngleRight}/></div>
       </div>
-      </Fragment>
     )
   }
 }
-export default Gallery
+export default Carou_perso_sombre

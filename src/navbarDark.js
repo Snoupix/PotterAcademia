@@ -25,7 +25,7 @@ export default class NavbarDark extends Component{
                 </DarkNavbutton>
                 <DarkNavbutton>
                     <span className="inkSpan reliques">Reliques de la mort</span>
-                    <button className="inkButton">Reliques de la mort</button>
+                    <a href="#reliques"><button className="inkButton">Reliques de la mort</button></a>
                 </DarkNavbutton>
             </nav>
         )
