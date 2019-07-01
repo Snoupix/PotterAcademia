@@ -46,8 +46,7 @@ const LightNavbutton = styled.div`
         position: absolute;
         font-size: 20px;
         font-family: 'IM Fell DW Pica', serif;
-        margin-top: 12px;
-        overflow: hidden;
+        margin-top: 16%;
     }
     @media screen and (max-width: 965px){
       .inkSpan, .inkButton{
