@@ -53,13 +53,15 @@ const DarkNavbutton = styled.div`
         line-height: 1.25;
     }
     @media screen and (max-width: 965px){
+        width: 75px;
+        height 25px;
         .reliques{
-            letter-spacing: 1px;
-            font-size 12px;
-            margin-top: 11%;
+            letter-spacing: 2px;
+            font-size 8px;
+            margin-top: 2%;
         }
         .inkSpan, .inkButton{
-            font-size: 15px;
+            font-size: 10px;
             font-weight: 600;
         }
     }

@@ -14,8 +14,8 @@ import FrontButton from './frontButtonSpells';
 import BackButton from './backButtonSpells';
 import './sorts.css';
 
-/* Backgrounds */
 
+/* Buttons name */
 
 const buttons = {
   sort1: "Accio",
@@ -40,6 +40,8 @@ const buttons = {
   sort20: "Stupefix",
   sort21: "Wingardium leviosa",
 };
+
+/* Backgrounds */
 
 const bg = {
   background1: "img/sorts/bigthunder.png",
@@ -176,17 +178,3 @@ export default class Sorts extends React.Component {
       )
     }
   }
-
-
-
-/*export default function Sorts(){
-    
-
-    render() {
-        return (
-             <ul>
-                 <li>button</li>
-             </ul>
-        );
-    }
-}*/

@@ -49,8 +49,10 @@ const LightNavbutton = styled.div`
         margin-top: 16%;
     }
     @media screen and (max-width: 965px){
+      width: 75px;
+      height: 25px;
       .inkSpan, .inkButton{
-        font-size: 15px;
+        font-size: 10px;
       }
       .inkSpan{
         margin-top: 14px;

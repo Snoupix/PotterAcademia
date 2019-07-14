@@ -10,6 +10,8 @@ import Gallery from './carousel'
 import Carou_perso_sombre from "./carousel_perso_sombre";
 import Maisons from "./Maison";
 import Marquemangemort from "./assets/img/Mangemortmarque.png";
+import Responsiveicon from './navbarResponsive';
+import Popup from './popup';
 
 
 const divStyle = {
@@ -61,7 +63,7 @@ class Section extends React.Component {
     animationisplaying: 0,
     classDiv: "cd-transition-layer visible",
     x : 1,
-   
+    showPopup: false
   };
 
   componentDidMount() {
@@ -73,6 +75,11 @@ class Section extends React.Component {
      })
   }
 
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
 
   Clickopen(e) {
     e.preventDefault();
@@ -99,7 +106,7 @@ class Section extends React.Component {
           >
     </div>
     <div id="accueildark" className={"divsombresection"} style={{width: "100%",height: "1100px"}}>
-    <img className={this.state.animationisplaying===1? "mangemort fadein" : "mangemort fadeout"} src={Marquemangemort}></img>
+    <img alt="" className={this.state.animationisplaying===1? "mangemort fadein" : "mangemort fadeout"} src={Marquemangemort}></img>
     </div>
     <div className={"divsombresection persosdark"} style={{width: "100%",height: "600px",margin: "auto",paddingTop: "100px"}}><Carou_perso_sombre></Carou_perso_sombre></div>
     <div className={"divsombresection"}><Sectionrelique></Sectionrelique></div>
@@ -123,7 +130,19 @@ class Section extends React.Component {
           <div id="acceuil" style={divStyle}>
           </div>
           <div style={divStyle2}> <Gallery></Gallery></div>
-          <div style={divStyle}><Sorts/></div>
+          <div style={divStyle}><Responsiveicon/><Sorts/></div>
+            <div style={divStyle2}>
+              <h1>hihi</h1>
+              <button onClick={this.togglePopup.bind(this)}>show popup</button>
+              <button onClick={() => {alert('woooooooot?');}}>try me when popup is open</button>
+              {this.state.showPopup ? 
+                <Popup
+                  text='Close Me'
+                  closePopup={this.togglePopup.bind(this)}
+                />
+                : null
+              }
+            </div>
           <div style={divStyle}><Gallery></Gallery></div>
           <div style={divStyle}><Carou_perso_sombre></Carou_perso_sombre></div>
           <div style={divStyle}><Maisons></Maisons></div>
