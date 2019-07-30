@@ -27,10 +27,17 @@
 .icon {
     display: none;
 }
+
+.toggled {
+    visibility: hidden;
+    display: none;
+}
+
 /* Display mobile navbar icon */
 
 @media screen and (max-width: 600px) {
     nav{border: none;}
+    /* .toggled{ display: none; visibility: hidden;} */
     .navbar{display: none; visibility:hidden; position: relative;}
 }
 @media screen and (max-width: 600px) {
@@ -41,10 +48,23 @@
         display: block;
         text-align: left;
     }
-    .toggled .navbar div, span, button{
-        float: none;
-        display: block;
+
+    /* display the menu onClick on the icon */
+
+    .toggled{
+        position: relative;
+        display: flex;
+        flex-direction: column;
         text-align: left;
         visibility: visible;
     }
+    .toggled a button{
+        width: 100px;
+        height: 10px;
+        border: none;
+    }
+    /*
+    nav span + a button{
+        float: left;
+    } */
 }

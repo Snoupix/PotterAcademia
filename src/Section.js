@@ -10,7 +10,6 @@ import Gallery from './carousel'
 import Carou_perso_sombre from "./carousel_perso_sombre";
 import Maisons from "./Maison";
 import Marquemangemort from "./assets/img/Mangemortmarque.png";
-import Responsiveicon from './navbarResponsive';
 import Popup from './popup';
 
 
@@ -130,7 +129,7 @@ class Section extends React.Component {
           <div id="acceuil" style={divStyle}>
           </div>
           <div style={divStyle2}> <Gallery></Gallery></div>
-          <div style={divStyle}><Responsiveicon/><Sorts/></div>
+          <div style={divStyle}><Sorts/></div>
             <div style={divStyle2}>
               <h1>hihi</h1>
               <button onClick={this.togglePopup.bind(this)}>show popup</button>
