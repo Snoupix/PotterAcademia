@@ -13,6 +13,7 @@
 
 .alice-carousel__wrapper{
 height: 380px!important;
+padding-bottom: 615px;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

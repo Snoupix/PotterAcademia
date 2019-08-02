@@ -182,9 +182,6 @@ Transition Layer
     visibility: hidden;
     overflow: hidden;
   }
-  .bg-layer{
-    z-index:-500;
-  }
   .cd-transition-layer .bg-layer {
     left: 50%;
     top: 50%;
