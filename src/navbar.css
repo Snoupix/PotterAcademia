@@ -58,13 +58,91 @@
         text-align: left;
         visibility: visible;
     }
-    .toggled a button{
-        width: 100px;
-        height: 10px;
+
+    /* buttons properties */
+
+    .toggled button{
+        width: 101%;
+        height: 100%;
+        font-weight: 300;
+        font-size: 20px;
+        letter-spacing: 1px;
+        background: #a4834d;
+        -webkit-mask: url("https://github.com/robin-dela/css-mask-animation/blob/master/img/nature-sprite-2.png?raw=true");
+        mask: url("https://github.com/robin-dela/css-mask-animation/blob/master/img/nature-sprite-2.png?raw=true");
+        -webkit-mask-size: 7100% 100%;
+        mask-size: 7100% 100%;
         border: none;
+        color: #fff;
+        font-family: 'IM Fell DW Pica', serif;
+        cursor: pointer;
+        -webkit-animation: ani2 0.7s steps(70) forwards;
+        animation: ani2 0.7s steps(70) forwards;
     }
-    /*
-    nav span + a button{
-        float: left;
-    } */
+    .toggled button:hover {
+        -webkit-animation: ani 0.7s steps(70) forwards;
+        animation: ani 0.7s steps(70) forwards;
+        cursor: inherit;
+    }
+    @-webkit-keyframes ani {
+        from {
+          -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+        }
+        to {
+          -webkit-mask-position: 100% 0;
+          mask-position: 100% 0;
+        }
+      }
+      @keyframes ani {
+        from {
+          -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+        }
+        to {
+          -webkit-mask-position: 100% 0;
+          mask-position: 100% 0;
+        }
+      }
+      @-webkit-keyframes ani2 {
+        from {
+          -webkit-mask-position: 100% 0;
+          mask-position: 100% 0;
+        }
+        to {
+          -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+        }
+      }
+      @keyframes ani2 {
+        from {
+          -webkit-mask-position: 100% 0;
+          mask-position: 100% 0;
+        }
+        to {
+          -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+        }
+    }
+    nav button a{
+        text-decoration: none;
+        color: black;
+    }
+    .nottoggled{
+      display: none;
+      visibility: hidden;
+    }
+
+    /* Buttons back text */
+
+    .span{
+        visibility: hidden;
+        display: none;
+    }
+    .spanchanged{
+        visibility: visible;
+        display: initial;
+        margin-top: -23%;
+        /* color: black!important; */
+    }
 }

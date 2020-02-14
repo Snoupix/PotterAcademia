@@ -48,12 +48,17 @@ export default class NavbarLight extends Component{
                     <div className="bar2"></div>
                     <div className="bar3"></div>
                 </div>
-                <div className={this.state.condition ? "toggled" : ""}>
-                    <a href="#acceuil"><button>Accueil</button></a>
-                    <a href="#personnages"><button>Personnages</button></a>
-                    <a href="#potions"><button>Potions</button></a>
-                    <a href="#sorts"><button>Sorts</button></a>
-                    <a href="#maisons"><button>Maisons</button></a>
+                <div className={this.state.condition ? "toggled" : "nottoggled"}>
+                    <button><a href="#acceuil">Accueil</a></button>
+                    <button className={this.state.condition ? "spanchanged" : "span"}>Accueil</button>
+                    <button><a href="#personnages">Personnages</a></button>
+                    <button className={this.state.condition ? "spanchanged" : "span"}>Personnages</button>
+                    <button><a href="#potions">Potions</a></button>
+                    <button className={this.state.condition ? "spanchanged" : "span"}>Potions</button>
+                    <button><a href="#sorts">Sorts</a></button>
+                    <button className={this.state.condition ? "spanchanged" : "span"}>Sorts</button>
+                    <button><a href="#maisons">Maisons</a></button>
+                    <button className={this.state.condition ? "spanchanged" : "span"}>Maisons</button>
                 </div>
             </nav>
         )
