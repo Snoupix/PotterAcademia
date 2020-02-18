@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
 import Section from './Section'
-
 import Bouton_fleche from './Bouton_fleche'
-
+import Section from './Section';
 
 import NavbarLight from './navbarLight';
 import NavbarDark from './navbarDark';
 // import Mouse from './cursorDarkside';
-
 
 class App extends React.Component {
   state = {
@@ -36,6 +34,7 @@ class App extends React.Component {
 
 
     <Bouton_fleche></Bouton_fleche>
+    
     
     
     </div>

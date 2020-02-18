@@ -5,9 +5,9 @@ import Tache from "./assets/img/ink_corner.png";
 import TacheWhite from "./assets/img/ink_corner_white.png";
 import Sectionrelique from './Sectionrelique'
 import "./Section.css";
-import { NONAME } from "dns";
 import Gallery from './carousel'
 import Carou_perso_sombre from "./carousel_perso_sombre";
+import Sorts from './sorts';
 import Maisons from "./Maison";
 import Marquemangemort from "./assets/img/Mangemortmarque.png";
 
@@ -108,6 +108,7 @@ class Section extends React.Component {
 	</div>
   </div>
       <div
+
         className={
           this.state.animationisplaying===0
             ? "cd-transition-layer visible" :  this.state.animationisplaying===1
@@ -122,6 +123,9 @@ class Section extends React.Component {
           <div id="acceuil" style={divStyle}>
           </div>
           <div style={divStyle2}> <Gallery></Gallery></div>
+          <div style={divStyle}><Sorts/></div>
+          <div style={divStyle}><Gallery></Gallery></div>
+          <div style={divStyle}><Carou_perso_sombre></Carou_perso_sombre></div>
           <div style={divStyle}><Maisons></Maisons></div>
           <img alt="" className={this.state.animationisplaying===1? " imgblack invisible" : "imgblack visible"} src={Tache} style={tacheStyle} />
           <div style={{position:"absolute"}}

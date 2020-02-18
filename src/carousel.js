@@ -5,7 +5,6 @@ import Card from './card_perso'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
-
 //style bouton previous
 const styleButtonPrev={
     display:"flex",
