@@ -127,6 +127,7 @@ header{
   visibility: visible;
   display: block;
   position: relative;
+  z-index: 0;
 }
 .cd-modal.visible .modal-content {
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
@@ -240,9 +241,6 @@ Transition Layer
   .no-cssanimations .cd-transition-layer {
     display: none;
   }
-  .bg-layer{
-    z-index: -500;
-  }
 
   @-webkit-keyframes cd-sequence {
     0% {
@@ -314,15 +312,3 @@ Transition Layer
       transform: translateY(-50%) translateX(-2%);
     }
   }
-.follower{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-.lumos{
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: #e8f7f7;
-  box-shadow: 0 0 10px 10px #e8f7f7;
-}

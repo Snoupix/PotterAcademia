@@ -16,7 +16,7 @@ const DarkNavbutton = styled.div`
     button {
         width: 101%;
         height: 100%;
-        font-weight: 300;
+        font-weight: 600;
         font-size: 20px;
         letter-spacing: 1px;
         background: #fff;
@@ -39,33 +39,30 @@ const DarkNavbutton = styled.div`
     .inkSpan {
         position: absolute;
         color: #fff;
-        text-align: center;
         width: 101%;
-        height: 100%;
-        padding-top: 12px;
         font-weight: 600;
-        position: absolute;
         font-size: 20px;
         font-family: 'IM Fell DW Pica', serif;
-        // margin-top: 12px; // ${props => props.nomargintop ? '0px' : '12px'};
-        overflow: hidden;
-        background-color : transparent;
         height : 100%;
-        padding-top : 12px;
+        margin-top : 10%;
+        line-height: 1;
     }
     .reliques{
         margin-top: 0px;
-        letter-spacing: 2px;
-        padding-top: 0px;
+        letter-spacing: 1px;
+        line-height: 1.25;
     }
     @media screen and (max-width: 965px){
+        width: 75px;
+        height 25px;
         .reliques{
-            letter-spacing: 1px;
-            font-size 12px;
-            margin-top: 5px;
+            letter-spacing: 2px;
+            font-size 8px;
+            margin-top: 2%;
         }
         .inkSpan, .inkButton{
-            font-size: 15px;
+            font-size: 10px;
+            font-weight: 600;
         }
     }
     @-webkit-keyframes ani {
